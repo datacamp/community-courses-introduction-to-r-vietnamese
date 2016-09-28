@@ -1,5 +1,5 @@
 ---
-title_meta  : Chapter 4
+title_meta  : Chương 4
 title       : Factors
 description : Trong rất nhiều trường hợp, dữ liệu có giá trị nằm trong một nhóm hữu hạn các giá trị cho trước. Ví dụ, giới tính có giá trị nam hoặc nữ. Trong R, các biến có loại này được gọi là factor. Các biến factor đóng vai trò rất quan trọng trong quá trình phân tích dữ liệu. Do đó, chúng ta sẽ cùng học cách tạo và xử lý các biến factor trong bài giảng dưới đây.
 

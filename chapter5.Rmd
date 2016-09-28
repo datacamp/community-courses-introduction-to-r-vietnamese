@@ -1,5 +1,5 @@
 --- 
-title_meta  : Chapter 5
+title_meta  : Chương 5
 title       : Data frames
 description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ co thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
 
