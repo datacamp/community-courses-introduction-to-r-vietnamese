@@ -1,0 +1,636 @@
+--- 
+title_meta  : Chapter 5
+title       : Data frames
+description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ co thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
+
+--- type:NormalExercise xp:100 skills:1 key:7f95849020a2563168920409022ce7bed20835b5
+## Data frame là gì?
+
+Trong bài giảng từ các phần trước, bạn hẳn còn nhớ rằng tất cả các thành phần trong một ma trận phải có cùng một định dạng. Ở phần trươc, tập dữ liệu Star Wars bạn có chỉ có duy nhất định dạng kiểu số. 
+
+Tuy nhiên, khi tiến hành khảo sát thị trường, ta thường hay phải sử dụng những câu hỏi như sau:
+
+- 'Bạn đã kết hôn chưa?' hoặc câu hỏi dạng 'có/không' (`logical`)
+- 'Bạn bao nhiêu tuổi?' (`numeric`)
+- 'Bạn đánh giá gì về sản phẩm này?' hoặc các câu hỏi mở khác (`character`)
+- ...
+
+Kết quả khảo sát từ những câu hỏi trong bảng nghiên cứu thị trường ở trên là một tập dữ liệu với các định dạng dữ liệu khác nhau. Bạn sẽ thấy rằng, khi phân tích dữ liệu, chúng ta sẽ phải xử lý dữ liệu với nhiều định dạng khác nhau. 
+
+Data frame là một tập dữ liệu, trong đó mỗi cột là một biến, mỗi dòng là một quan sát. Định dạng dữ liệu này khá tương đồng với các phần mềm phân tích thống kê khác như SAS hoặc SPSS
+
+*** =instructions
+Ấn 'Submit Answer'. Tập dữ liệu  [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) sẽ được hiển thị ra ngoài màn hình tương tác.
+
+*** =hint
+Ấn 'Submit Answer' và xem kết quả
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Hiển thị tập dữ liệu đính kèm trong R
+mtcars 
+```
+
+*** =solution
+```{r}
+# Hiển thị tập dữ liệu đính kèm trong R
+mtcars 
+```
+
+*** =sct
+```{r}
+test_output_contains("mtcars", incorrect_msg = "Không thay đỗi các câu lệnh. Chắc chắn rằng bạn đã gõ chính xác `mtcars`.")
+success_msg("Tuyệt vời! Tiếp tục làm bài tập tiếp theo nhé.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:3d0e64ecf5f69521ee538ecc713caa02b8b0ec46
+## Kiểm tra dữ liệu
+
+Thật là nhiều ô-tô!
+
+Khi phân tích dữ liệu, xử lý các tập dữ liệu lớn không phải là điều hiếm thấy. Khi bạn xử lý các tập dữ liệu lớn (hoặc cực lớn), đối với các nhà phân tích dữ liệu, việc đầu tiên là cần phải hiểu chính xác cấu trúc và các thành phần chính trong dữ liệu. Do đó, hiển thị một phần của tập dữ liệu cần phân tích sẽ rất hữu ích trong trường hợp này. 
+
+Vậy thì làm thế nào để thực hiện trên R? Thế này nhé, hàm 
+[`head()`](http://www.rdocumentation.org/packages/utils/functions/head) 
+cho phép bạn xem các quan sát đầu tiên trong tập dữ liệu. Tương tự, hàm [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) cho phép bạn hiển thị các quan sát cuối cùng trong tập dữ liệu.
+
+Cả hai hàm [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) và [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) đều hiển thị 'header' của tập dữ liệu, cho phép bạn nắm được thông tin về tên các biến trong tập dữ liệu cần phân tích.
+
+*** =instructions
+Gọi hàm [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) từ tập dữ liệu [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) để xem tên biến và các quan sát đầu tiên của dữ liệu.
+
+*** =hint
+`head(mtcars)` sẽ hiển thị các quan sát đầu tiên của tập dữ liệu `mtcars`.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Gọi hàm head() trong tập mtcars
+
+```
+
+*** =solution
+```{r}
+# Gọi hàm head() trong tập mtcars
+head(mtcars)
+```
+
+*** =sct
+```{r}
+test_function("head", "x", incorrect_msg = "Bạn đã gõ đúng tên tập dữ liệu `mtcars` trong hàm `head()` hay chưa?")
+test_output_contains("head(mtcars)", incorrect_msg = "Bạn chỉ cần hiển thị kết quả của hàm `head()`, không cần phải gán kết quả cho giá trị mới.")
+success_msg("Tuyệt vời! Chúng ta có gì trong tập dữ liệu này đây? Ví dụ, `hp` cho chúng ta thông tin về mã lực của các loại xe; xe Datsun có mã lực thấp nhất trong 6 chiếc xe được hiển thị. Để biết được tổng quan ý nghĩa của các biến, gõ lệnh `?mtcars`  trong màn hình tương tác và xem tài liệu mô tả. Làm bài tập tiếp theo nhé! ");
+```
+
+--- type:NormalExercise xp:100 skills:1 key:f4d5b1a2c4aef31645fc7e3505e699fb6e48f3e6
+## Xem cấu trúc dữ liệu
+
+Một phương pháp khác để theo dõi khái quát cấu trúc của dữ liệu là câu lệnh [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). Hàm [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) hiển thị cấu trúc dữ liệu trong tập dữ liệu cần phân tích. Đối với tập dữ liệu mtcars, hàm này cho ta biết một số thông tin sau:
+
+- Tổng số quan sát (32 loại xe hơi)
+- Tổng số các biến (11 thuộc tính của xe hơi)
+- Danh sách tất cả các biến (VD. `mpg`, `cyl` ... )
+- Kiểu dữ liệu (VD: `num`)
+- Một số quan sát đầu tiên
+
+Sử dụng câu lệnh [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) có lẽ sẽ là bước đầu tiên bạn cần thực hiện khi bạn bắt đàu phân tích một tập dữ liệu mới. Đây là cách rất tốt để bạn hiểu thêm về cấu trúc dữ liệu trước khi đi vào phân tích dữ liệu chi tiết.
+
+*** =instructions
+Xem xét cấu trúc dữ liệu của tập dữ liệu [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars). Lưu ý hãy kiểm tra xem bạn có nhận được kết quả như bài tập ở phần trước hay không.
+
+*** =hint
+Sử dụng hàm [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) vào tập dữ liệu [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars).
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Tìm hiểu cấu trúc dữ liệu của tập mtcars
+```
+
+*** =solution
+```{r}
+# Tìm hiểu cấu trúc dữ liệu của tập mtcars
+str(mtcars)
+```
+
+*** =sct
+```{r}
+test_output_contains("str(mtcars)", incorrect_msg = "Bạn đã sử dụng đúng lệnh `str()` với tập `mtcars`?")
+success_msg("Rất tốt! Bạn có thấy tất cả các thông tin hiển thị như bài tập của chúng ta hay không? Làm bài tập tiếp theo nhé.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:df0b89706d90526b3c0bbe15e400b74cbd900704
+## Tạo data frame
+
+Chỉ sử dụng tập dữ liệu có sẵn trong R là chưa đủ, phần tiếp theo của chương này sẽ hướng dẫn các bạn cách thức tự tạo tập dữ liệu. 
+
+Ví dụ, bạn muốn tạo một data frame mô tả các thuộc tính của 8 hành tinh rong hệ mặt trời. Theo gợi ý từ bạn của bạn, các đặc tính cơ bản gồm có:
+
+- Loại hành tinh (Terrestrial hay Gas Giant).
+- Bán kính (so với trái đất)
+- Tần suất quay xung quanh mặt trời (so với trái đất)
+- Hành tinh có lớp vành đai hay không (TRUE hoặc FALSE).
+
+Sau khi nghiên cứu thông tin từ [Wikipedia](http://en.wikipedia.org/wiki/Planet), giờ bạn đã cảm thấy tự tin để tạo các véc-tơ: `name`, `type`, `diameter`, `rotation` and `rings`. Các thành phần đầu tiên của mỗi véc-tơ tương ứng với các quan sát đầu tiên trong tập dữ liệu.
+
+Bạn có thể tự tạo data frame với hàm [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame). Sau khi tạo các véc-tơ, bạn có thể đưa các véc-tơ đó vào data frame. Bởi vì mỗi cột có độ dài như nhau, nên các véc-tơ bạn đưa vào cũng cần có độ dài như nhau. Tuy nhiên, đừng quên rằng data frame có thể chứa những kiểu dữ liệu khác nhau
+
+*** =instructions
+Sử dụng hàm [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame) để tạo data frame. Sử dụng các véc-tơ `name`, `type`, `diameter`, `rotation` và `rings` theo thứ tự, các véc-tơ này là tham số trong `data.frame()`. Gọi kết quả từ data frame `planets_df`.
+
+*** =hint
+Hàm `data.frame()` có thể xây dựng như sau:
+
+```
+data.frame(planets, type, diameter)
+```
+Bạn có thể hoàn thành nó không? 
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Xây dựng các véc-tơ
+name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Tạo data frame
+planets_df <-
+
+```
+
+*** =solution
+```{r}
+# Xây dựng các véc-tơ
+name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Tạo data frame
+planets_df <- data.frame(name, type, diameter, rotation, rings)
+```
+
+*** =sct
+```{r}
+msg = "Không thay đổi các tham số khi xây dựng véc-tơ. Chỉ cần gọi hàm `data.frame()` để tạo data frame `planets_df`."
+test_object("name", undefined_msg = msg, incorrect_msg = msg)
+test_object("type", undefined_msg = msg, incorrect_msg = msg)
+test_object("diameter", undefined_msg = msg, incorrect_msg = msg)
+test_object("rotation", undefined_msg = msg, incorrect_msg = msg)
+test_object("rings", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("planets_df",
+            incorrect_msg = "Bạn đã sử dụng hàm `data.frame()` chính xác chưa? Lưu ý thứ tự các véc-tơ trong `data.frame()`, các véc-tơ cần được sắp xếp theo thứ tự: `name`, `type`, `diameter`, `rotation` and finally `rings`.")
+
+success_msg("Rất tốt! Làm bài tập tiếp theo nhé. Theo logic tự nhiên, công việc tiếp theo của bạn sẽ là phân tích tập dữ liệu bạn vừa xây dựng.");
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:c13ea421dd078030a225f49e53a8927ce8fefbe0
+## Tạo data frame (2)
+
+Data frame `planets_df` sẽ có 8 quan sát với 5 biến. Tập dữ liệu này đã được lưu, bạn có thể trực tiếp sử dụng tập dữ liệu này.
+
+*** =instructions
+Sử dụng hàm [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) để khám phá cấu trúc các biến trong tập dữ liệu `planets_df`.
+
+*** =hint
+`planets_df` đã sẵn sàng cho bạn phân tích, thế nên hàm `str(planets_df)` sẽ cho phép thực hiện bài tập trên.
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Kiểm tra cấu trúc planets_df
+```
+
+*** =solution
+```{r}
+# Kiểm tra cấu trúc planets_df
+str(planets_df)
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hay ghi đè lên tập dữ liệu `planets_df`"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("str(planets_df)", incorrect_msg = "Bạn đã có kết quả của cấu trúc từ tập dữ liệu `planets_df`? Sử dụng hàm `str()` để hoàn thành!")
+success_msg("Tuyệt vời!  Giờ thì bạn đã hiểu rất rõ ràng cấu trúc của tập `planets_df`Now that you have a clear understanding of the `planets_df` data set. Đến lúc bạn cần biết làm thế nào để lựa chọn các giá trị trong tập dữ liệu này. Ta sẽ học tất cả những điều này trong các bài tập tiếp theo!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:8c664726b8a173cda730cbb20a52ac1795d9a0e9
+## Lựa chọn các giá trị trong data frame
+
+Tương tự như véc-tơ và ma-trận, bạn có thể lựa chọn các giá trị trong data frame với dấu ngoặc vuông `[ ]`. Băng cách sử dụng dấu phẩy, bạn có thể lựa chọn dòng hoặc côt theo thứ tự. Ví dụ:
+
+- `my_df[1,2]` lựa chọn giá trị của dòng 1 cột 2 trong `my_df`.
+- `my_df[1:3,2:4]` lựa chọn dòng 1,2,3 và các dòng 2,3,4 trong `my_df`.
+
+Đôi lúc, bạn muốn lựa chọn tất cả các giá trị của hàng hoặc cột. Ví dụ
+`my_df[1, ]` sẽ lựa chọn tất cả các giá trị của dòng thứ nhất. Giờ ta hãy áp dụng bài tập trên vào tập dữ liệu `planets_df`!
+
+*** =instructions
+- Từ tập dữ liệu `planets_df`, lựa chọn bán kính của Mercury (sao Thủy): đây là giá trị của dòng một, cột ba.
+- Từ tập dữ liệu `planets_df`, lựa chọn tất cả dữ liệu của Mars (sao Hỏa) tại dòng số 4
+
+*** =hint
+Để lựa chọn bán kính của Venus (sao Kim - dòng số hai), bạn sẽ cần sử dụng câu lệnh `planets_df[2,3]`. 
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Hiển thị kết quả bán kính của Mercury (dòng 1, cột 3)
+
+# Hiển thị toàn bộ dữ liệu của Mars (dòng số 4)
+
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Hiển thị kết quả bán kính của Mercury (dòng 1, cột 3)
+planets_df[1,3]
+
+# Hiển thị toàn bộ dữ liệu của Mars (dòng số 4)
+planets_df[4, ]
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("planets_df[1,3]", incorrect_msg = "Bạn đã lựa chọn và hiển thị bán kính của Mercury (sao Thủy) chưa? Bạn có thể sử dụng `[1,3]`.")
+test_output_contains("planets_df[4, ]", incorrect_msg = "Bạn đã lựa chọn và hiển thị tất cả dữ liệu của Mars  (sao Hỏa) chưa? Bạn có thể sử dụng `[4,]`.")
+success_msg("Tuyệt vời! Bện cạnh việc việc lựa chọn các biến theo thứ tự chữ số, bạn có thể sử dụng tên các biến trong data frame. Ta sẽ học kỹ thuật này trong bài tập tiếp theo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:faf104fb0c605fd89f048648a4a588200bc89c76
+## Lựa chọn các giá trị trong data frame (2)
+
+Bên cạnh việc sử dụng các chữ số để lựa chọn các thành phần trong data frame, bạn có thể sử dụng tên các biến để lựa chọn các cột. 
+
+Giả sử bạn một lựa chọn ba giá trị đầu tiên của cột  `type`, bạn có thể sử dụng cách sau:
+
+```
+planets_df[1:3,1]
+```
+
+Điểm yếu của phương pháp này là bạn phải biết chính xác thứ tự của cột `type`. Phương pháp này sẽ rất khó thực hiện khi dữ liệu của bạn có rất nhiều biến. Do đó, lựa chọn theo tên của biến sẽ đơn giản hơn rất nhiều:
+
+```
+planets_df[1:3,"type"]
+```
+
+*** =instructions
+Lựa chọn và hiển thị 5 giá trị đầu tiên của biến `"diameter"` trong `planets_df`.
+
+*** =hint
+Bạn có thể lựa chọn 5 giá trị đầu tiên với hàm `planets_df[1:5, ...]`. Bạn có thể điền tiếp vào dấu  `...` để chỉ lựa chọn biến `"diameter"` không?
+
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn 5 giá trị đầu tiên của cột diameter
+
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn 5 giá trị đầu tiên của cột diameter
+planets_df[1:5, "diameter"]
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "Bạn đã lựa chọn chính xác 5 giá trị đầu tiên của diameter chưa? Bạn có thể sử dụng `[1:5, \"diameter\"]`")
+success_msg("Rất tốt! Làm bài tập tiếp theo nhé!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:e550ecb6ec45b856e6160ddfbb3d7875998e8365
+## Chỉ lựa chọn các hành tinh có vành đai
+
+Bạn sẽ thường hay lựa chọn tất cả các cột, hay nói một cách khác - tất cả các biến trong data frame. Chẳng hạn, nếu bạn muốn lựa chọn tất cả các giá trị của biến `diameter`, cả hai cách sau đều có thể thực hiện được:
+
+```
+planets_df[,3]
+planets_df[,"diameter"]
+```
+
+Tuy nhiên, có một cách nhanh hơn. Bạn có thể sử dụng ký tự `$`:
+
+```
+planets_df$diameter
+```
+
+*** =instructions
+- Sử dụng ký tự `$` để lựa chọn biến `rings` từ tập dữ liệu `planets_df`. Lưu kết quả vào véc-tơ `rings_vector`.
+- Hiển thị  `rings_vector` để chắc chắn bạn đã làm đúng.
+
+*** =hint
+`planets_df$diameter` cho phép lựa chọn biên `diameter` từ tập dữ liệu `planets_df`; bạn sẽ cần làm gì để lựa chọn biến `rings` đây?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn biến rings từ dữ liệu planets_df
+rings_vector <- 
+  
+# Hiển thị kết quả rings_vector
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn biến rings từ dữ liệu planets_df
+rings_vector <- planets_df$rings
+
+# Hiển thị kết quả rings_vector
+rings_vector
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("rings_vector",
+            incorrect_msg = "Bạn đã lựa chọn biến `rings` từ tập dữ liệu `planets_df` chính xác chưa? Sử dụng hàm `$rings`. Lưu kết quả vào véc-tơ `rings_vector`.")
+test_output_contains("rings_vector", incorrect_msg = "Đừng quên hiển thị kết quả của véc-tơ `rings_vector`sau khi khởi tạo!")
+success_msg("Tuyệt vời! Giờ thì cùng khám phá cách khác để lấy dữ liệu trong bài tập tiếp theo nhé!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:1581bf4667477f274188f4f637ec7fdc73659651
+## Chỉ lựa chọn các hành tinh có vành đai (2)
+
+Bạn có lẽ vẫn còn nhớ từ hồi phổ thông rằng, một số hành tinh có vành đai, một số khác thì không. Tuy nhiên, mớ kiến thức này cũng từ khá lâu rồi nên bạn không thể nhớ được tên các hành tinh loại này.
+
+R có thể giúp bạn như thế nào đây?
+
+Nếu bạn sử dụng `rings_vector` trong màn hình tương tác, bạn sẽ nhận được kết quả:
+
+```
+[1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+```
+Điều này có nghĩa rằng 4 quan sát đầu tiên (4 hành tinh đầu tiên) không có vành đai (`FALSE`), nhưng các hành tinh khác thì có (`TRUE`). Tuy nhiên, bạn không thể có một cái nhìn khái quát của tên các hành tinh, bán kính, v.v. Hãy sử dụng `rings_vector` để lựa chọn dữ liệu từ 4 hành tinh có vành đai.
+
+*** =instructions
+The code on the right selects the `name` column of all planets that have rings. Adapt the code so that instead of only the `name` column, _all_ columns for planets that have rings are selected.
+
+Các câu lệnh bên cho phép lựa chọn cột `name` của tất cả các hành tinh có vành đai. Áp dụng câu lệnh này, sao cho thay vì chỉ lựa chon cột `name`, lựa chọn tất cả các cột với các hành tinh có vành đai. 
+
+*** =hint
+Nhớ rằng để lựa chọn _tất cả_ các cột, bạn có thể đơn giản là để trống phần bên phải sau dấu phẩy! Nghĩa là bạn có thể sử dụng `[rings_vector, ]`.
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+rings_vector <- planets_df$rings
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+#Áp dụng đoạn code trên với tất cả các cột với các hành tinh có vành đai
+planets_df[rings_vector, "name"]
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+#Áp dụng đoạn code trên với tất cả các cột với các hành tinh có vành đai
+planets_df[rings_vector, ]
+```
+
+*** =sct
+```{r}
+msg <- "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("rings_vector", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Bạn đã sử dụng câu lệnh chính xác chưa? Bạn có thể sử dụng `planets_df[rings_vector, ]`. Lưu ý sử dụng dấu phẩy trong trường hợp này!")
+success_msg("Tuyệt vời! Trong bài tập tiếp theo, chúng ta sẽ học một phương pháp khác, hiệu quả hơn.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:a4a8b72a74097196eb2f8a28b056987aae834565
+## Chỉ lựa chọn các hành tinh có vành đai - cách ngắn gọn
+
+Chính xác thì bạn đã học được gì trong các bài tập ở phần trước? Bạn lựa chọn các tập dữ liệu con từ data frame (`planets_df`) dựa theo điều kiện cho trước (có vành đai hay không có vành đai).  
+
+Giờ thì chúng ta sẽ lên một cấp độ cao hơn và sử dụng hàm
+[`subset()`](http://www.rdocumentation.org/packages/base/functions/subset). Bạn có thể sử dụng hàm [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset), hàm này cho phép bạn thực hiện nhanh hơn những câu lệnh mà bạn đã sử dụng trong phần trước.
+
+```
+subset(my_df, subset = some_condition)
+``` 
+
+Tham số đầu tiên của  [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) xác định tập dữ liệu bạn muốn sử dụng. Bằng cách thêm tham số thứ hai, bạn cung cấp cho R các thông tin và điều kiện cần thiết để lọc dữ liệu.
+
+Các câu lệnh dưới đây sẽ cho bạn kết quả chinh xác như bài tập ở phần trước. Tuy nhiên ở phần này, bạn không cần phải sử dụng véc-tơ `rings_vector`!
+
+
+```
+subset(planets_df, subset = rings)
+``` 
+
+*** =instructions
+Sử dụng  hàm `subset()` với `planets_df` để lựa chọn các hành tinh có bán kính nhỏ hơn trái đất. Bởi vì biến  `diameter` là biến tương đối, nên điều kiện cần thiết sẽ là `diameter < 1`.
+
+
+
+*** =hint
+`subset(planets_df, subset = ...)` gần như hoàn thiện rồi; bạn có thể điền nốt vào dâu  `...` không?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn điều kiện diameter < 1
+
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Lựa chọn điều kiện diameter < 1
+subset(planets_df, subset = diameter < 1)
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_correct({
+  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Bạn đã sử dụng điều kiện `subset = ...` chính xác chưa. Điều kiện cần thiết là `diameter < 1`. Hiển thị kết quả.")  
+}, {
+  test_function("subset", args = "x", 
+                not_called_msg = "Hãy chắc chắn rằng bạn đã sử dụng hàm `subset()`!",
+                incorrect_msg = "Tham số đầu tiên trong hàm `subset()` là `planets_df`.")
+})
+success_msg("Tuyệt vời! Hàm `subset()` không chỉ đơn giản hơn, mà còn dễ hiểu hơn để đọc hiểu các đoạn code của bạn. Làm bài tập tiếp theo nhé.");
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:6a6fe74d3917c37380f7ac616ce084aa7814fb8a
+## Sắp xếp thứ tự dữ liệu
+
+Sắp xếp thứ tự trong biến là một trong những công việc rất hay được sử dụng. Khi phân tích dữ liệu, bạn có thể sắp xếp thứ tự theo một biến nhất định trong tập dữ liệu. Với R, bạn có thể sử dụng hàm [`order()`](http://www.rdocumentation.org/packages/base/functions/order). 
+
+[`order()`](http://www.rdocumentation.org/packages/base/functions/order) là hàm cho phép bạn sắp xếp thứ tự của mỗi giá trị trong véc-tơ hoặc biến, ví dụ:
+
+```
+> a <- c(100, 10, 1000)
+> order(a)
+[1] 2 1 3
+```
+10, đây là giá trị ở vị trí thứ 2 của `a`, đây là giá trị nhỏ nhất trong véc-tơ a. Do đó, kết quả trả ra 2 ở vị trí đầu tiên là giá trị nhỏ nhất, 1 sẽ là giá trị thứ 2 (100  là giá trị lớn thứ 2) trong hàm `order(a)`.
+
+Điều này có nghĩa là chúng ta có thể sử dụng kết quả của `order(a)` để thay đổi thứ tự các giá trị trong `a`
+    
+```
+> a[order(a)]
+[1]   10  100 1000
+``` 
+
+*** =instructions
+Thực hiện thử với hàm [`order()`](http://www.rdocumentation.org/packages/base/functions/order) trong màn hình giao diện. Click vào nút 'Submit Answer' khi bạn sẵn sàng để tiếp tục
+
+*** =hint
+Chỉ cần gõ lệnh [`order()`](http://www.rdocumentation.org/packages/base/functions/order) trong màn hình tương tác!
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Sử dụng hàm order với màn hình tương tác
+```
+
+*** =solution
+```{r}
+# Sử dụng hàm order với màn hình tương tác
+```
+
+*** =sct
+```{r}
+success_msg("Tuyệt vời! Giờ thì ta hãy sử dụng hàm `order()` để sắp xếp thứ tự trong data frame!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:fa88b58bf2cf62e0c181dfdcbdd2e1ddeac66807
+## Sắp xếp thứ tự trong data frame
+
+Giờ bạn đã nắm được cách sử dụng hàm [`order()`](http://www.rdocumentation.org/packages/base/functions/order). Giờ hãy thực hiện vài bài tập hữu ích với hàm trên. Giả sử bạn muốn sắp xếp thứ tự data frame của bạn, sao cho các hành tinh nhỏ nhất đứng trước, các hành tinh lớn hơn sẽ đứng sau. Ta cần sắp xếp biến  `diameter`.
+
+*** =instructions
+- Gọi hàm `order()` đối với `planets_df$diameter` (cột `diameter` của tập dữ liệu `planets_df`). Lưu kết quả với véc-tơ `positions`.
+- Giờ thay đổi thứ tự `planets_df` với véc-tơ `positions` với vị trí của dòng trong ngoặc vuông. Giữ tất cả các cột
+
+*** =hint
+- Sử dụng `order(planets_df$diameter)` để tạo véc-tơ `positions`.
+- Giờ thị, bạn có thể sử dụng `positions` bên trong dấu ngoặc vuông: `planets_df[...]`; bạn có thể điền nốt phần còn lại `...` không?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Sử dụng order() để tạo véc-tơ chứa thứ tự các giá trị positions
+positions <-  
+
+# Sử dụng positions để sắp xêp planets_df
+
+```
+
+*** =solution
+```{r}
+# Data frame planets_df từ bài tập phần trước sẽ được load
+
+# Sử dụng order() để tạo véc-tơ chứa thứ tự các giá trị positions
+positions <- order(planets_df$diameter)
+
+# Sử dụng positions để sắp xêp planets_df
+planets_df[positions, ]
+```
+
+*** =sct
+```{r}
+msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("positions",
+            incorrect_msg = "Bạn đã tính chính xác biến `positions` hay chưa? Bạn có thể sử dụng `sort(planets_df$diameter)`.")
+test_output_contains("planets_df[positions,]",
+                     incorrect_msg = "Sử dụng hàm `planets_df[positions, ]` để sắp xếp lại thứ tự `planets_df`; lưu ý sử dụng dấu phẩy trong ngoặc vuông!")
+success_msg("Tuyệt vời! Bài tập này kết thúc chương nói về data frame. Nhớ rằng với R data frame là kiểu dữ liệu rất quan trong bởi lẽ bạn sẽ phải sử dụng data frame trong suốt quá trình phân tích dữ liệu Một kiểu cấu trúc dữ liệu thường gặp khác là list, và chúng ta sẽ tìm hiểu thêm về list trong chương tiếp theo")
+```
+
+
