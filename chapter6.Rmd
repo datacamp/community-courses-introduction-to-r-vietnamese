@@ -1,0 +1,427 @@
+--- 
+title_meta  : Chương 6
+title       : Lists
+description : Lists, không giống như véc-tơ, có thể lưu trữ các kiểu dữ liệu khác nhau. Trong chương này, chúng ta sẽ học cách khởi tạo, đặt tên và lọc các thành phần trong list.
+
+--- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
+## Tại sao chúng ta lại cần sử dụng list?
+
+Xin chúc mừng bạn! Đến thời điểm này, bạn đã làm quen với các kiểu dữ liệu sau:
+
+- **Véc-tơ** (mảng một chiều): có thể lưu trữ dữ liệu kiểu số, ký tự hoặc logic. Các giá trị trong véc-tơ phải có cùng định dạng.
+- **Ma trận** (mảng hai chiều): có thể lưu trữ dữ liệu kiểu số, ký tự hoặc logic. Các giá trị trong ma trận phải có cùng định dạng
+- **Data frame** (đối tượng hai chiều):  có thể lưu trữ dữ liệu kiểu số, ký tự hoặc logic. Trong cùng một cột, các giá trị phải có cùng định dạng. Tuy nhiên, các cột khác nhau có thể chứa dữ liệu kiểu khác nhau.
+
+Cũng khá là dễ hiểu cho những bạn mới học R phải không? ;-)
+
+*** =instructions
+Click 'Submit Answer' để bắt đầu tìm hiểu kiến thức về list!
+
+*** =hint
+Ấn nút 'Submit Answer'.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Ấn nút 'Submit Answer'
+```
+
+*** =solution
+```{r}
+# Ấn nút 'Submit Answer'
+```
+
+*** =sct
+```{r}
+success_msg("Sẵn sàng! Xử lý bài tập tiếp theo nào.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:68f93c5c504616bd18876da52cd123277d56fc8b
+## Tại sao chúng ta lại cần sử dụng list? (2)
+
+Trong R, **list** cũng tương tự như danh sách check-list những việc bạn cần phải làm vậy. Mỗi đối tượng trong list có thể có độ dài, định dạng khác nhau về những thứ bạn cần phải thực hiện.
+
+List cho phép ta tập hợp nhiều đối tượng khác nhau theo thứ tự cho trước trở thành một đối tượng. Những đối tượng này có thể là ma-trận, véc-tơ, data frame hay thậm chí là một list khác. Các đối tượng không nhất thiết phải có mối liên hệ với nhau.
+
+
+Ta có thể nói rằng, list là một kiểu định dạng dữ liệu "siêu đẳng" mà bạn có thể lưu trữ bất cứ thông tin nào.
+
+*** =instructions
+Click 'Submit Answer' để bắt đầu bài tập đầu tiên về  list.
+
+*** =hint
+Click 'Submit Answer' để bắt đầu bài tập đầu tiên về  list.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Click 'Submit Answer' để bắt đầu bài tập đầu tiên về  list.
+```
+
+*** =solution
+```{r}
+# Click 'Submit Answer' để bắt đầu bài tập đầu tiên về  list.
+```
+
+*** =sct
+```{r}
+success_msg("Tốt lắm. Bắt đầu thực hành nhé!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:4beee9cb532c889903218b49b83ab5ef133eac83
+## Tạo một list
+
+Ta hãy tạo một list đầu tiên! Để xây dựng một list, bạn có thể sử dụng hàm [`list()`](http://www.rdocumentation.org/packages/base/functions/list): 
+
+```
+my_list <- list(comp1, comp2 ...)
+```
+
+Tham số trong hàm list là các đối tượng sẽ được lưu trữ trong list. Nhớ rằng các đối tượng đó có thể là ma-trận, véc-tơ, hay một list khác...
+
+*** =instructions
+Tạo một list tên là `my_list`, list này chứa các đối tượng `my_vector`, `my_matrix` và `my_df`.
+
+*** =hint
+Sử dụng hàm [`list()`](http://www.rdocumentation.org/packages/base/functions/list) với các đối tượng trong list là `my_vector`, `my_matrix` và `my_df`, nhớ ngăn cách các đối tượng bằng dấu phẩy .
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Véc-tơ số từ 1 đến 10
+my_vector <- 1:10 
+
+# Ma-trận số từ 1 đến 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# 10 giá trị đầu tiên của tập dữ liệu mtcars
+my_df <- mtcars[1:10,]
+
+# Tạo list với các đối tượng đã tạo:
+my_list <- 
+```
+
+*** =solution
+```{r}
+# Véc-tơ số từ 1 đến 10
+my_vector <- 1:10 
+
+# Ma-trận số từ 1 đến 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# 10 giá trị đầu tiên của tập dữ liệu mtcars
+my_df <- mtcars[1:10,]
+
+# Tạo list với các đối tượng đã tạo
+my_list <- list(my_vector, my_matrix, my_df)
+```
+
+*** =sct
+```{r}
+msg = "Không thay đổi các giá trị của `my_vector`, `my_matrix` or `my_df`!"
+test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_list",
+            incorrect_msg = "Có vẻ như `my_list` không chứa chính xác các đối tượng. Hãy chắc chắn rằng bạn đã sử dụng các biến `my_vector`, `my_matrix` và `my_df` trong hàm `list()` và ngăn cách chúng bởi dấu phẩy.")
+success_msg("Tuyệt vời! Làm bài tập tiếp theo nhé.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:89dd0126568b1ff5a84033c571907a8a282245e4
+## Tạo tên cho các đối tượng trong list
+
+Giống như khi bạn tạo các danh sách check-list, để tránh việc có thể quên tên các đối tượng của list, bạn có thể đặt tên cho chúng.
+
+```
+my_list <- list(name1 = your_comp1, 
+                name2 = your_comp2)
+``` 
+
+Phương pháp này sẽ tạo một list với các đối tượng tên là `name1`, `name2`, v.v... Sau khi đã tạo list, nếu bạn muốn đặt tên các đối tượng, bạn có thể sử dụng hàm `names()` như đối với véc-tơ. Các câu lệnh dưới đây là tương đương với câu lệnh ở phía trên.
+
+```
+my_list <- list(your_comp1, your_comp2)
+names(my_list) <- c("name1", "name2")
+```
+
+*** =instructions
+- Thay đổi các câu lệnh ở bài tập trước bằng cách thêm tên các đối tượng chứa trong list. Đặt tên `my_vector` thành `vec`, `my_matrix` thành `mat` và `my_df` thành `df`. 
+- Hiển thị `my_list` để bạn có thể xem kết quả.
+
+*** =hint
+
+Phương pháp đầu tiên, phương pháp gán tên cho các đối tượng trong list, là phương pháp đơn giản nhất. Phương pháp đó được thực hiện như sau:
+
+```
+my_list <- list(vec = my_vector)
+```
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Véc-tơ số từ 1 đến 10
+my_vector <- 1:10 
+
+# Ma-trận số từ 1 đến 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# 10 giá trị đầu tiên của tập dữ liệu mtcars
+my_df <- mtcars[1:10,]
+
+# Tạo list với các đối tượng đã tạo
+my_list <- list(my_vector, my_matrix, my_df)
+
+# Hiển thị kết quả
+
+```
+
+*** =solution
+```{r}
+# Véc-tơ số từ 1 đến 10
+my_vector <- 1:10 
+
+# Ma-trận số từ 1 đến 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# 10 giá trị đầu tiên của tập dữ liệu mtcars
+my_df <- mtcars[1:10,]
+
+# Tạo list với các đối tượng đã tạo
+my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
+
+# Hiển thị kết quả
+my_list
+```
+
+*** =sct
+```{r}
+msg = "Không thay đổi các giá trị củ `my_vector`, `my_matrix` và `my_df`!"
+test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_list",
+            incorrect_msg = "It looks like `my_list` does not contain the correct elements.")
+test_object("my_list", eq_condition = "equal",
+            incorrect_msg = "Có vẻ như `my_list` không chứa chính xác 
+            các đối tượng. Hãy chắc chắn rằng bạn đã sử dụng các biến 
+            `my_vector`, `my_matrix` và `my_df` trong hàm `list()` . Chắc chắn rằng bạn sử dụng tên `vec`, `mat` và `df` theo thứ tự.");
+test_output_contains("my_list", incorrect_msg = "Đừng quên hiển thị `my_list` trên màn hình tương tác! Đơn giản là thêm `my_list` ở trên editor.")
+success_msg("Tuyệt vời! Bạn không chỉ biết cách tạo list, bạn còn biết cách đặt tên cho chúng nữa rồi! Trăm hay không bằng tay quen. Xem tiếp bài tập tiếp theo nhé!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:19fd17cc792ef870c1558b3a9bae08c1d1e3acae
+## Tạo tên cho các đối tượng trong list (2)
+
+Là một con nghiền xem phim, bạn quyết định bắt đầu lưu trữ thông tin về các bộ phim hấp dẫn bằng list.
+
+Bắt đầu bằng việc tạo list cho bộ phim "The Shining". Chúng ta tạo các biến `mov`, `act` và `rev` trên R. 
+
+*** =instructions
+
+Hoàn thành các câu lệnh ở bên để tạo `shining_list`, một list chứa 3 đối tượng sau:
+
+- moviename: định dạng chuỗi ký tự chứa thông tin về tên bộ phim (lưu trong biến `mov`)
+- actors: véc-tơ chứa thông tin về diễn viên chính (lưu trữ trong `act`)
+- reviews: data frame chứa các thông tin về lượt đánh giá của khán giả (lưu trữ trong `rev`)
+
+Đừng quên đặt tên các đối tượng trong list lần lượt là moviename, actors và reviews.
+
+*** =hint
+`shining_list <- list(moviename = mov)` chỉ là một phần đáp án mà thôi;  bạn còn phải thêm `act` và `rev` vào trong list với tên phù hợp.
+
+*** =pre_exercise_code
+```{r}
+mov <- "The Shining"
+act      <- c("Jack Nicholson","Shelley Duvall","Danny Lloyd","Scatman Crothers","Barry Nelson")
+sources     <- c("IMDb1","IMDb2","IMDb3")
+comments    <- c("Best Horror Film I Have Ever Seen","A truly brilliant and scary film from Stanley Kubrick","A masterpiece of psychological horror")
+scores      <- c(4.5,4,5)
+rev     <- data.frame(scores, sources, comments)
+rm(scores, sources, comments)
+```
+
+*** =sample_code
+```{r}
+# Các biến mov, act và rev 
+
+# Hoàn thành câu lệnh sau để tạo shining_list
+shining_list <- list(moviename = mov)
+```
+
+*** =solution
+```{r}
+# Các biến mov, act và rev 
+
+# Hoàn thành câu lệnh sau để tạo shining_list
+shining_list <- list(moviename = mov, actors = act, reviews = rev)
+```
+
+*** =sct
+```{r}
+msg = "Không thay đổi các giá trị các biến đã khởi tạo!"
+lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list",eq_condition = "equal",
+            incorrect_msg = "Có vẻ như `shining_list` không chứa các đối tượng chính xác. Các đối tượng lần lượt là `mov`, `act`, và `rev`.")
+success_msg("Tuyệt vời! Giờ bạn đã biết cách khởi tạo và đặt tên list. Tương tự như chương trước, chúng ta hãy học cách lấy các giá trị từ list")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:1ef3278944562caef64b9927dd2ddb6ee52334cd
+## Lựa chọn các giá trị từ list
+
+Trong list của bạn thường chứa các giá trị dạng số. Do đó, để lấy một hoặc nhiều giá trị từ list cũng chẳng phải là việc hoàn toàn dễ dàng.
+
+Một phương pháp để lấy một giá trị là sử dụng thứ thuwscuar đối tượng đó. Ví dụ, để lấy giá trị đầu tiên của `shining_list`, bạn có thể sử dụng:
+
+```
+shining_list[[1]]
+```
+Một phương pháp nhanh chóng để kiểm tra là gõ câu lệnh trên màn hình tương tác. Lưu ý: để lựa chọn các giá trị từ véc-tơ, bạn có thể sử dụng dấu ngoặc vuông `[ ]`. Đừng nhầm lẫn chúng với nhau.
+
+Bạn cũng có thể sử dụng tên của các đối tượng với dấu `[[ ]]` hoặc `$`. Cả hai phương pháp sẽ lấy ra data frame chưa các thông tin đánh giá của khán giả.
+
+```
+shining_list[["reviews"]]
+shining_list$reviews
+``` 
+
+Bên cạnh việc lấy các giá trị của list, bạn thường xuyên cần phải lấy một giá trị cụ thể từ các đối tượng đó. Ví dụ, với câu lệnh `shining_list[[2]][1]`, kết quả sẽ trả cho bạn đối tượng thứ 2 trong list, `actors` (`shining_list[[2]]`), và giá trị đầu tiên trong đối tượng đó (`[1]`). Khi gõ câu lệnh trên vào màn hình tương tác, bạn sẽ thấy kết quả hiển thị là Jack Nicholson.
+
+*** =instructions
+- Lựa chọn đối tượng chứa thông tin về diễn viên (actor) từ list `shining_list` 
+- Lựa chọn giá trị thứ hai từ đối tượng vừa chọn
+
+*** =hint
+- Để lọc ra các thông tin actors, bạn có thể sử dụng `$actors`.
+- Để lựa chọn giá trị thứ 3, ta sử dụng câu lệnh `shining_list$actors[3]`. Ta cần phải thay đổi điều gì để lựa chọn giá trị thứ 2?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+```{r}
+# shining_list đang được load từ hệ thống
+
+# Hiển thị véc-tơ actors
+
+
+# Hiển thị giá trị thứ 2 của véc-tơ actors
+
+```
+
+*** =solution
+```{r}
+# shining_list đang được load từ hệ thống
+
+# Hiển thị véc-tơ actors
+shining_list$actors
+
+# Hiển thị giá trị thứ 2 của véc-tơ actors
+shining_list$actors[2]
+```
+
+*** =sct
+```{r}
+msg <- "Không thay đối giá trị list `shining_list!"
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("shining_list$actors", incorrect_msg = "Bạn có lựa chọn chính xác véc-tơ chứa actors? Bạn có thể sử dụng câu lệnh `shining_list$actors`")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Để lựa chọn diễn viên thứ 2 từ véc-tơ actors, bạn có thể thực hiện như sau: `shining_list$actors` cho phép hiển thị véc-tơ actors, sau đó bạn có thể thêm `[2]` để lựa chọn giá trị thứ 2.")
+success_msg("Tuyệt vời! Lựa chọn giá trị từ list cũng dễ thôi đúng không? Làm bài tập tiếp theo nhé!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:ca3f7b71504ff93940cf65889d406a58c5b0019c
+## Thêm các thông tin vào trong list
+
+Khá là tự hào với list đầu tiên của mình, bạn có cho các thành viên của câu lac bộ xem phim cùng xem. Tuy nhiên, một thành viên nhiều kinh nghiệm có tên M.McDowell nhận xét rằng, bạn quên thông tin về năm trình chiếu. Và rằng bạn muốn trở thành chủ tịch câu lạc bộ trong năm sau, bạn quyết định thêm các thông tin này vào trong list của mình.
+
+Để thêm các đối tượng trong list, bạn có thể sử dụng hàm [`c()`](http://www.rdocumentation.org/packages/base/functions/c) tương tự như khi thực hiện với véc-tơ
+
+```
+ext_list <- c(my_list , my_val)
+``` 
+
+Câu lệnh này đơn giản là thêm  đối tượng `my_val` vào list ban đầu `my_list`. Đối tượng mói được thêm vào sẽ đứng ở cuối list
+
+Nếu bạn muốn đặt tên cho đối tượng mới được thêm vào, bạn có thể đơn giản sử dụng câu lệnh như ở bài tập phần trước.
+
+```
+ext_list <- c(my_list, my_name = my_val)
+```
+
+*** =instructions
+- Hoàn thiện câu lệnh dưới đây sao cho đối tượng `year` được thêm vào  `shining_list`, `year` mang giá trị 1980. Gán kết quả vào `shining_list_full`.
+- Cuối cùng, xem cấu trúc của list `shining_list_full` với hàm [`str()`](http://www.rdocumentation.org/packages/utils/functions/str).
+
+*** =hint
+
+Xem câu lệnh ví dụ dưới đây, câu lệnh này có thể giúp bạn lúc ban đầu:
+
+```
+shining_list <- c(shining_list, ...)
+```
+Bạn vẫn còn phải thêm một vài lệnh sau dâu ba chấm.
+
+*** =pre_exercise_code
+```{r, eval = FALSE}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+
+```{r}
+# shining_list đang được load
+
+# Chúng ta quên điều gì đó; thêm biên year vào trongshining_list
+shining_list_full <- 
+
+# Hiển thị shining_list_full
+
+```
+
+*** =solution
+
+```{r}
+# shining_list đang được load
+
+# Sử dụng c() để thêm year vào list shining_list
+shining_list_full <- c(shining_list, year = 1980)
+
+# Hiển thị shining_list_full
+str(shining_list_full)
+```
+
+*** =sct
+```{r}
+msg = "Không thay đổi các giá trị `shining_list!"
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list_full", eq_condition = "equal",
+            incorrect_msg = paste("Bạn đã thêm biến `year` vào trong `shining_list` một cách chính xác chưa,",
+                                  "giá trị của year là 1980? Bạn có thể sử dụng `c(shining_list, year = 1980)`"))
+test_function("str", "object", incorrect_msg = "Đừng quên hiển thị cấu trúc list `shining_list_full` với câu lệnh `str()`.")
+success_msg("Tuyệt vời! Đây là bài tập cuối cùng về list. Giờ bạn đã có một kiến thức cơ bản vững chắc về lập trình ngôn ngữ với R. Tuy nhiên còn rất nhiều thứ còn có thể học được nữa. Hay xem thử các khóa học của Data Camp và chúc bạn sớm trở thành một chuyên gia phân tích dữ liệu!")
+```
+
+
