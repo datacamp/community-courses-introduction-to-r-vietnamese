@@ -6,7 +6,7 @@ description : "Trong chương tiếp theo trong khóa học này, chúng ta sẽ
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Tạo một véc-tơ
 
-Bạn có nghĩ mình đang có vận may không? Bạn cần nó đấy, vì trong chương này bạn sẽ được đến thăm Thành phố Dục vọng, hay còn được gọi là *Thiên đường của các nhà thống kê học*!
+Bạn có nghĩ rằng mình được thần may mắn chiếu cố không? Có lẽ bạn sẽ muốn vậy đấy, bởi lẽ trong chương này bạn sẽ được đến thăm Vegas - thành phố của  dục vọng, hay cũng còn được gọi là *Thiên đường của các nhà thống kê học*!
 
 Nhờ có R cũng như khả năng phân tích số liệu mới học, bạn sẽ được học cách nâng cao trình độ cá cược của bản thân và bắt đầu con đường bài bạc chuyên nghiệp. Trong chương này, bạn sẽ học được cách theo dõi quá trình cá cược của bản thân cũng như phương pháp thực hiện một vài phân tích đơn giản từ dữ liệu trong quá khứ. Cùng thẳng tiến tới Vegas nào!!
 
@@ -49,7 +49,7 @@ success_msg("Tuyệt lắm! Sang bài tập tiếp theo nào.")
 
 Trên con đường trở thành triệu phú, bạn sẽ thường xuyên sử dụng các véc-tơ. Véc-tơ là các chuỗi 1 chiều, được dùng để chứa dữ liệu số, ký tự hoặc lôgic. Nói cách khác, véc-tơ là một công cụ đơn giản để chứa dữ liệu.  Ví dụ, bạn có thể dùng chúng để lưu trữ thông tin lời lỗ hàng ngày mà bạn kiếm được tại sòng bạc.
 
-Trong R, bạn sử dụng hàm kết hợp[`c()`] để tạo véc-tơ (http://www.rdocumentation.org/packages/base/functions/c). Bạn sẽ dùng các dấu phẩy để nối các yếu tố của véc-tơ với nhau, và đặt chúng ở giữa hai dấu ngoặc. Xem ví dụ dưới đây:
+Trong R, bạn sử dụng hàm kết hợp[`c()`](http://www.rdocumentation.org/packages/base/functions/c) để tạo véc-tơ. Bạn sẽ dùng các dấu phẩy để nối các yếu tố của véc-tơ với nhau, và đặt chúng ở giữa hai dấu ngoặc. Xem ví dụ dưới đây:
 
 ```
 numeric_vector <- c(1, 2, 3)
@@ -121,7 +121,7 @@ Với `roulette_vector`:
 - Thứ Năm bạn thua $350
 - Thứ Sáu bạn thắng $10
 
-Bạn chỉ chơi bài poker và rulet, vì các bàn chơi trò xúc xắc đã đầy người. Để dùng dữ liệu này trong R, bạn quyết định tạo các biến `poker_vector` và `roulette_vector`.
+Vì các bàn chơi trò xúc xắc đã đầy người nên bạn chỉ chơi bài poker và rulet. Để dùng dữ liệu này trong R, bạn quyết định tạo các biến `poker_vector` và `roulette_vector`.
 
 *** =instructions
 Gán dữ liệu thắng thua của trò rulet cho biến `roulette_vector`.
@@ -195,7 +195,7 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 # Sử dụng các ngày trong tuần làm tên của poker_vector
 names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
-# Sử dụng các ngày trong tuần làm tên của roulette_vectors
+# Sử dụng các ngày trong tuần làm tên của roulette_vector
 ```
 
 *** =solution
@@ -843,12 +843,12 @@ Bằng cách sử dụng các dấu so sánh, chúng ta có thể trả lời c�
 
 Các dấu so sánh dạng lôgic được sử dụng trong R:
 
-- `<` thể hiện sự nhỏ hơn
-- `>` thể hiện sự lớn hơn
-- `<=` thể hiện sự nhỏ hơn hoặc bằng
-- `>=` thể hiện sự lớn hơn hoặc bằng
-- `==` thể hiện sự bằng nhau
-- `!=` thể hiện sự không bằng nhau
+- `<` nhỏ hơn
+- `>` lớn hơn
+- `<=` nhỏ hơn hoặc bằng
+- `>=` lớn hơn hoặc bằng
+- `==` bằng nhau
+- `!=` không bằng nhau
 
 Trong chương trước, bạn đã học là `6 > 5` trả cho bạn kết quả `TRUE`. Cái hay của R là bạn cũng có thể sử dụng những dấu so sánh trên cho véc-tơ. Ví dụ:
 
@@ -883,7 +883,7 @@ names(roulette_vector) <- days_vector
 # Bạn chơi poker thắng tiền vào những ngày nào?
 selection_vector <- 
   
-# In kết quả của selection_vector
+# Hiển thị kết quả của selection_vector
 
 ```
 
@@ -899,7 +899,7 @@ names(roulette_vector) <- days_vector
 # Bạn chơi poker thắng tiền vào những ngày nào?
 selection_vector <- poker_vector > 0
   
-# In kết quả của selection_vector
+# Hiển thị kết quả của selection_vector
 selection_vector
 ```
 
@@ -929,7 +929,7 @@ Bạn có thể chọn những yếu tố bạn muốn chọn bằng cách đặ
 poker_vector[selection_vector]
 ```
 
-R sẽ hiểu  khi bạn đặt một véc-tơ lôgic trong ngoặc vuông: nó sẽ chỉ chọn những yếu tố được trả về giá trị `TRUE` trong `selection_vector`.
+R sẽ hiểu  khi bạn đặt một véc-tơ lôgic trong ngoặc vuông và sẽ chỉ chọn những yếu tố được trả về giá trị `TRUE` trong `selection_vector`.
 
 *** =instructions
 Đặt `selection_vector` trong dấu ngoặc vuông để gán giá trị bạn thắng theo ngày thắng cho biến `poker_winning_days`.

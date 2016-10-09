@@ -9,7 +9,7 @@ description : "Trong chương này, chúng ta sẽ bắt đầu tìm hiểu về
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
 ## Phương pháp học trên DataCamp
 
-Để giải các bài tập, bạn gõ các đoạn lệnh R vào trình soạn thảo (editor) phía tay phải . Sau khi bạn nhấp chuột vào nút "Submit Answer", R sẽ xử lý từng dòng lệnh, sau đó thông báo cho bạn biết kết quả mình làm đúng hay làm sai. Kết quả của câu lệnh của bạn sẽ được hiển thị tại bảng điều khiển ở góc dưới bên phải. 
+Để giải các bài tập, bạn gõ các câu lệnh R vào trình soạn thảo (editor) phía tay phải . Sau khi bạn nhấp chuột vào nút "Submit Answer", R sẽ xử lý từng dòng lệnh, sau đó thông báo cho bạn biết kết quả mình làm đúng hay làm sai. Kết quả của câu lệnh của bạn sẽ được hiển thị tại bảng điều khiển ở góc dưới bên phải. 
 
 Ký tự `#` được dùng để thêm chú thích trong R, nhờ vậy mà khi xem xét các câu lệnh, người đọc có thể nắm được cách thức bạn phân tích và xử lý dữ liệu. R sẽ bỏ qua và không xử lý các đoạn chú thích này, do đó,  kết quả của câu lệnh sẽ không bị thay đổi. Ví dụ, _Tính 3 + 4_ trong editor ở phải được coi là một chú thích.
 
@@ -48,7 +48,7 @@ Hãy thêm câu lệnh để tính tổng của 6 và 12, giống như ví dụ 
 *** =sct
 ```{r}
 test_output_contains("18", incorrect_msg = "Bạn cần thêm `6 + 12` trên một dòng lệnh mới. Đừng bắt đầu dòng lệnh với `#`, câu lệnh của bạn sẽ không được R xử lý đâu!")
-success_msg("Tuyệt vời! Bạn đã thấy kết quả của đoạn lệnh trên console chưa? Giờ thì bạn đã làm quen với trình duyệt, ta cùng học thêm về R nhé!")
+success_msg("Tuyệt vời! Bạn đã thấy kết quả của câu lệnh trên console chưa? Giờ thì bạn đã làm quen với trình duyệt, ta cùng học thêm về R nhé!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
@@ -64,6 +64,7 @@ success_msg("Tuyệt vời! Bạn đã thấy kết quả của đoạn lệnh t
 - Lấy số dư: `%%`
 
 Hai phép tính cuối cùng có thể giải thích như sau:
+
 - Phép tính `^` đưa số bên trái lên lũy thừa bậc số bên phải của nó, ví dụ `3^2`bằng 9.
 - Phép tính `%%` trả lại phần dư của phép chia số bên trái cho số bên phải, ví dụ `5 %% 3` bằng 2.
 
@@ -172,7 +173,7 @@ x
 # Gán giá trị 42 cho x
 x <- 42
 
-#Hiển thịgiá trị của biến x
+#Hiển thị giá trị của biến x
 x
 ```
 
@@ -190,7 +191,7 @@ success_msg("Làm tốt lắm! Bạn có để ý thấy R không hiển thị g
 Giả dụ bạn có một cái làn hoa quả trong đó có 5 quả táo. Bạn muốn gán số lượng táo trong một biến tên là `my_apples`. 
 
 *** =instructions
-- Gõ đoạn lệnh sau đây vào trình soạn thảo: `my_apples <- 5`. `my_apples` sẽ được gán giá trị là 5.
+- Gõ câu lệnh sau đây vào trình soạn thảo: `my_apples <- 5`. `my_apples` sẽ được gán giá trị là 5.
 - Gõ: `my_apples` dưới chú thích thứ hai để hiển thị ra giá trị của `my_apples`.
 - Nhấn nút 'Submit Answer', và theo dõi trong console. Bạn sẽ thấy số 5 được hiển thị. Điều này chứng tỏ R đã gắn biến `my_apples` cho giá trị 5.
 
@@ -351,10 +352,10 @@ R có thể xử lý nhiều loại dữ liệu khác nhau. Chúng ta sẽ bắt
 
 - Các giá trị thập phân ví dụ như `4.5`được gọi là **số** (numeric)
 - Các số tự nhiên ví dụ như `4` được gọi là **số nguyên**. Các số nguyên cũng nằm trong tập số (integers)
-- Các giá trị luận lý (`TRUE` hoặc `FALSE`) được gọi là **giá trị lôgic** (logical)
+- Các giá trị lôgic  (`TRUE` hoặc `FALSE`) được gọi là **giá trị lôgic** (logical)
 - Các giá trị chữ hoặc chuỗi chữ được gọi là **ký tự** (characters)
 
-Chú ý: dấu ngoặc kép bên phải thể hiện "some text" là một ký tự.
+Chú ý: Dấu ngoặc kép bên phải thể hiện "some text" là một ký tự.
 
 *** =instructions
 Thay đổi giá trị của các biến sau đây:

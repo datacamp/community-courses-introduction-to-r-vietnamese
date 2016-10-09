@@ -56,7 +56,7 @@ success_msg("Tuyệt! Sang bài tập tiếp theo nào.")
 ## Phân tích trong ma trận
 
 
-Đã đến lúc bắt tay vào việc chính. Trong bài tập sau đây, bạn sẽ phân tích doanh số vé bán ra của chùm phim Star Wars. Chúc bạn may mắn!
+Đã đến lúc bắt tay vào việc chính. Trong bài tập sau đây, bạn sẽ phân tích doanh số vé bán ra của loạt phim đình đám: Star Wars. Chúc bạn may mắn!
 
 Trong trình soạn thảo, chúng ta có sẵn ba véc-tơ. Mỗi véc-tơ thể hiện doanh thu vé của một trong 3 bộ phim đầu tiên của Star Wars. Yếu tố đầu tiên của từng véc-tơ thể hiện doanh thu vé trong nội địa nước Mỹ, còn yếu tố thứ hai thể hiện doanh thu vé bán ngoài nước Mỹ. (nguồn: Wikipedia).
 
@@ -125,7 +125,7 @@ success_msg("Đúng là may mắn đang ở bên bạn! Sang bài tập tiếp t
 --- type:NormalExercise xp:100 skills:1 key:f734e8bf74
 ## Đặt tên trong ma trận
 
-Để giúp bạn nhớ mình đã dùng `star_wars_matrix` để chứa những thông tin gì, bạn muốn dùng tên của các bộ phim để đặt cho từng dòng. Điều này không chỉ giúp bạn dễ đọc thông tin hơn, mà còn giúp bạn dễ dàng lọc ra những yếu tố mà bạn cần từ trong ma trận.
+Để giúp mình nhớ được đã sử dụng `star_wars_matrix` để chứa những thông tin gì, bạn muốn dùng tên của các bộ phim để đặt cho từng dòng. Điều này không chỉ giúp bạn dễ đọc thông tin hơn, mà còn giúp bạn dễ dàng lọc ra những yếu tố mà bạn cần từ trong ma trận.
 
 Cũng giống như véc-tơ, bạn có thể đặt tên cho các dòng và cột trong ma trận. 
 
@@ -134,7 +134,7 @@ rownames(my_matrix) <- row_names_vector
 colnames(my_matrix) <- col_names_vector
 ```
 
-Chúng tôi đã chuẩn bị sẵn hai véc-tơ cho bạn là `region`, và `titles`. Bạn sẽ sử dụng 2 véc-tơ này để đặt tên cho cột và dòng trong `star_wars_matrix`, theo thứ tự đó.
+Chúng tôi đã chuẩn bị sẵn hai véc-tơ cho bạn là `region`, và `titles`. Bạn sẽ sử dụng 2 véc-tơ này để đặt tên cho cột và dòng trong `star_wars_matrix` theo thứ tự.
 
 *** =instructions
 - Sử dụng `colnames()` để đặt tên cho các cột trong `star_wars_matrix` với véc-tơ `region`.
@@ -169,7 +169,7 @@ titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
 # Đặt tên cho các dòng với titles
 
 
-# In ra kết quả của star_wars_matrix
+# Hiển thị ra kết quả của star_wars_matrix
 ```
 
 *** =solution
@@ -192,7 +192,7 @@ colnames(star_wars_matrix) <- region
 # Đặt tên cho các dòng với titles
 rownames(star_wars_matrix) <- titles
 
-# In ra kết quả của star_wars_matrix
+# Hiển thị ra kết quả của star_wars_matrix
 star_wars_matrix
 ```
 
@@ -218,7 +218,7 @@ success_msg("Tuyệt lắm! Bạn sắp thành một Jedi trong lĩnh vực R r�
 ## Tính tổng doanh thu vé trên toàn cầu
 Để trờ thành huyền thoại điện ảnh, một bộ phim phải đạt được doanh số bán vé toàn cầu "khủng"
 
-Muốn tính toán lợi nhuận của cả ba bộ phim Star Wars, ta cần phải tính tổng doanh thu chúng đạt được ở cả trong và ngoài Mỹ.
+Muốn tính toán lợi nhuận của cả ba bộ phim Star Wars, ta cần phải tính tổng doanh thu chúng đạt được ở cả trong và ngoài nước Mỹ.
 
 Trong R, hàm [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) giúp ta dễ dàng tính được tổng của từng dòng trong một ma trận. Để làm được điều đó, hàm này sẽ tạo một véc tơ mới:
 
@@ -340,7 +340,7 @@ success_msg("Làm tốt lắm! Sau khi thêm cột và ma trận thì bước ti
 --- type:NormalExercise xp:100 skills:1 key:bcadb29139
 ## Thêm dòng
 
-Giống như đã có nhân thì phải có quả, đã có hàm [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) thì phải có hàm [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). 
+Đã có bên trái thì ắt phải có bên phải, đã có hàm [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) thì phải có hàm [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). 
 
 Tại workspace trong R, nơi chứa tất cả các đối tượng bạn đã khai báo, ([tìm hiểu thêm về định nghĩa của workspace tại đây](http://www.statmethods.net/interface/workspace.html)), có hai ma trận được tạo sau đây:
 
@@ -415,7 +415,7 @@ success_msg("Tuyệt vời! Ở bài tập tiếp đây bạn sẽ học cách t
 --- type:NormalExercise xp:100 skills:1 key:1bfe5ae096
 ## Tổng doanh thu bán vé của cả bộ sáu tập phim Star Wars
 
-Đã có hàm [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) thì phải có hàm [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), cũng giống như đã có hàm [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) thì phải có hàm [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Workspace trong R của bạn đã có sẵn ma trận `all_wars_matrix` là ma trận đã được tạo trong bài tập trước đó; để xem lại nội dung của ma trận này ta gõ `all_wars_matrix`. Đã đến lúc tính tổng doanh thu bán vé của cả bộ sáu tập phim Star Wars.
+Đã có hàm [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) thì phải có hàm [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). Tương tụ như vậy, đã có hàm [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) thì phải có hàm [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Workspace trong R của bạn đã có sẵn ma trận `all_wars_matrix` là ma trận đã được tạo trong bài tập trước đó; để xem lại nội dung của ma trận này ta gõ `all_wars_matrix`. Đã đến lúc tính tổng doanh thu bán vé của cả bộ sáu tập phim Star Wars.
 
 *** =instructions
 - Tính tổng doanh thu bộ phim cả trong và ngoài nước Mỹ, rồi gán kết quả đó cho `total_revenue_vector`. Để làm điều đó, ta sử dụng hàm [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums).
