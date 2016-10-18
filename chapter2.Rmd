@@ -295,7 +295,7 @@ test_object("poker_vector",
 test_object("roulette_vector",
             eq_condition = "equal",
             incorrect_msg = "H&atilde;y nh&#7899; g&aacute;n `days_vector` l&agrave;m t&ecirc;n c&#7911;a c&aacute;c y&#7871;u t&#7889; trong `roulette_vector`.")
-success_msg("Hay l&#7855;m! M&#7897;t l&#7901;i g&oacute;p &yacute; nh&#7887; cho b&#7841;n, &#273;&oacute; l&agrave; ph&#7843;i nh&#7845;t &#273;&#7883;nh tr&aacute;nh vi&#7879;c l&#7863;p c&aacute;c c&acirc;u l&#7879;nh. H&atilde;y sang b&agrave;i t&#7853;p ti&#7871;p theo &#273;&#7875; h&#7885;c c&aacute;c l&agrave;m to&aacute;n v&#7899;i v&eacute;c-t&#417; nh&eacute;!")
+success_msg("Hay l&#7855;m! Data Camp c&oacute; m&#7897;t l&#7901;i khuy&ecirc;n nho nh&#7887; d&agrave;nh cho b&#7841;n, &#273;&oacute; l&agrave; nh&#7845;t &#273;&#7883;nh ph&#7843;i tr&aacute;nh vi&#7879;c l&#7863;p l&#7841;i c&aacute;c c&acirc;u l&#7879;nh. H&atilde;y sang b&agrave;i t&#7853;p ti&#7871;p theo &#273;&#7875; h&#7885;c c&aacute;c th&#7921;c hi&#7879;n c&aacute;c ph&eacute;p t&iacute;nh v&#7899;i v&eacute;c-t&#417; nh&eacute;!")
 ```
 
 
