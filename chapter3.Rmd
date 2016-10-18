@@ -47,7 +47,7 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 test_function("matrix", c("data", "byrow", "nrow"),
               incorrect_msg = "B&#7841;n &#273;&atilde; t&#7841;o &#273;&uacute;ng ma tr&#7853;n ch&#432;a? B&#7841;n &#273;&#7885;c k&#7929; h&#432;&#7899;ng d&#7851;n nh&eacute;, c&acirc;u tr&#7843; l&#7901;i &#273;&atilde; &#273;&#432;&#7907;c cho r&#7891;i &#273;&#7845;y!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "H&igrave;nh nh&#432; &#273;&#7883;nh ngh&#297;a c&#7911;a ma tr&#7853;n c&oacute; v&#7845;n &#273;&#7873;. B&#7841;n &#273;&#7885;c k&#7929; h&#432;&#7899;ng d&#7851;n nh&eacute;, c&acirc;u tr&#7843; l&#7901;i &#273;&atilde; &#273;&#432;&#7907;c cho r&#7891;i &#273;&#7845;y!")
+                     incorrect_msg = "H&igrave;nh nh&#432; &#273;&#7883;nh ngh&#297;a c&#7911;a ma tr&#7853;n c&oacute; v&#7845;n &#273;&#7873;. B&#7841;n &#273;&#7885;c k&#7929; h&#432;&#7899;ng d&#7851;n nh&eacute;, c&acirc;u tr&#7843; l&#7901;i &#273;&atilde; c&oacute; s&#7861;n r&#7891;i &#273;&#7845;y!")
 success_msg("Tuy&#7879;t! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
@@ -266,7 +266,7 @@ worldwide_vector <- rowSums(star_wars_matrix)
 msg <- "&#272;&#7915;ng s&#7917;a n&#7897;i dung c&#7911;a c&aacute;c bi&#7871;n `box_office_all` v&agrave; `star_wars_marix`&#273;&#432;&#7907;c cho s&#7861;n!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
-test_object("worldwide_vector", incorrect_msg = "D&ugrave;ng h&agrave;m `rowSums()` v&#7899;i `star_wars_matrix` r&#7891;i ch&#7913;a k&#7871;t qu&#7843; v&agrave;o `worldwide_vector`.")
+test_object("worldwide_vector", incorrect_msg = "D&ugrave;ng h&agrave;m `rowSums()` v&#7899;i `star_wars_matrix` r&#7891;i l&#432;u k&#7871;t qu&#7843; v&agrave;o `worldwide_vector`.")
 success_msg("L&agrave;m t&#7889;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
