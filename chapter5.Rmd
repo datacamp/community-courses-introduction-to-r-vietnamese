@@ -1,12 +1,12 @@
 --- 
 title_meta  : Chương 5
 title       : Data frames
-description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ co thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
+description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ có thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
 
 --- type:NormalExercise xp:100 skills:1 key:7f95849020a2563168920409022ce7bed20835b5
 ## Data frame là gì?
 
-Trong bài giảng từ các phần trước, bạn hẳn còn nhớ rằng tất cả các thành phần trong một ma trận phải có cùng một định dạng. Ở phần trươc, tập dữ liệu Star Wars bạn có chỉ có duy nhất định dạng kiểu số. 
+Trong bài giảng từ các phần trước, bạn hẳn còn nhớ rằng tất cả các thành phần trong một ma trận phải có cùng một định dạng. Ở phần trước, tập dữ liệu Star Wars bạn có chỉ chứa duy nhất định dạng kiểu số. 
 
 Tuy nhiên, khi tiến hành khảo sát thị trường, ta thường hay phải sử dụng những câu hỏi như sau:
 
@@ -243,7 +243,7 @@ str(planets_df)
 msg = "Kh&ocirc;ng x&oacute;a hay ghi &#273;&egrave; l&ecirc;n t&#7853;p d&#7919; li&#7879;u `planets_df`"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("str(planets_df)", incorrect_msg = "B&#7841;n &#273;&atilde; c&oacute; k&#7871;t qu&#7843; c&#7911;a c&#7845;u tr&uacute;c t&#7915; t&#7853;p d&#7919; li&#7879;u `planets_df`? S&#7917; d&#7909;ng h&agrave;m `str()` &#273;&#7875; ho&agrave;n th&agrave;nh!")
-success_msg("Tuy&#7879;t v&#7901;i!  Gi&#7901; th&igrave; b&#7841;n &#273;&atilde; hi&#7875;u r&#7845;t r&otilde; r&agrave;ng c&#7845;u tr&uacute;c c&#7911;a t&#7853;p `planets_df`Now that you have a clear understanding of the `planets_df` data set. &#272;&#7871;n l&uacute;c b&#7841;n c&#7847;n bi&#7871;t l&agrave;m th&#7871; n&agrave;o &#273;&#7875; l&#7921;a ch&#7885;n c&aacute;c gi&aacute; tr&#7883; trong t&#7853;p d&#7919; li&#7879;u n&agrave;y. Ta s&#7869; h&#7885;c t&#7845;t c&#7843; nh&#7919;ng &#273;i&#7873;u n&agrave;y trong c&aacute;c b&agrave;i t&#7853;p ti&#7871;p theo!")
+success_msg("Tuy&#7879;t v&#7901;i!  Gi&#7901; th&igrave; b&#7841;n &#273;&atilde; hi&#7875;u r&#7845;t r&otilde; r&agrave;ng c&#7845;u tr&uacute;c c&#7911;a t&#7853;p `planets_df`. &#272;&#7871;n l&uacute;c b&#7841;n c&#7847;n bi&#7871;t l&agrave;m th&#7871; n&agrave;o &#273;&#7875; l&#7921;a ch&#7885;n c&aacute;c gi&aacute; tr&#7883; trong t&#7853;p d&#7919; li&#7879;u n&agrave;y. Ta s&#7869; h&#7885;c t&#7845;t c&#7843; nh&#7919;ng &#273;i&#7873;u n&agrave;y trong c&aacute;c b&agrave;i t&#7853;p ti&#7871;p theo!")
 ```
 
 
@@ -350,7 +350,7 @@ planets_df[1:5, "diameter"]
 ```{r}
 msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n ch&iacute;nh x&aacute;c 5 gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a diameter ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `[1:5, \&quot;diameter\&quot;]`")
+test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n ch&iacute;nh x&aacute;c 5 gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a diameter ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `[1:5, \"diameter\"]`")
 success_msg("R&#7845;t t&#7889;t! L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
@@ -522,13 +522,13 @@ subset(planets_df, subset = diameter < 1)
 msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_correct({
-  test_output_contains("subset(planets_df, subset = diameter &lt; 1)&quot;, incorrect_msg = &quot;B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng &#273;i&#7873;u ki&#7879;n `subset = ...` ch&iacute;nh x&aacute;c ch&#432;a. &#272;i&#7873;u ki&#7879;n c&#7847;n thi&#7871;t l&agrave; `diameter &lt; 1`. Hi&#7875;n th&#7883; k&#7871;t qu&#7843;.")  
+  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng &#273;i&#7873;u ki&#7879;n `subset = ...` ch&iacute;nh x&aacute;c ch&#432;a. &#272;i&#7873;u ki&#7879;n c&#7847;n thi&#7871;t l&agrave; `diameter < 1`. Hi&#7875;n th&#7883; k&#7871;t qu&#7843;.")  
 }, {
   test_function("subset", args = "x", 
                 not_called_msg = "H&atilde;y ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `subset()`!",
                 incorrect_msg = "Tham s&#7889; &#273;&#7847;u ti&ecirc;n trong h&agrave;m `subset()` l&agrave; `planets_df`.")
 })
-success_msg("Tuy&#7879;t v&#7901;i! H&agrave;m `subset()` kh&ocirc;ng ch&#7881; &#273;&#417;n gi&#7843;n h&#417;n, m&agrave; c&ograve;n d&#7877; hi&#7875;u h&#417;n &#273;&#7875; &#273;&#7885;c hi&#7875;u c&aacute;c &#273;o&#7841;n code c&#7911;a b&#7841;n. L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.");
+success_msg("Tuy&#7879;t v&#7901;i! H&agrave;m `subset()` kh&ocirc;ng ch&#7881; &#273;&#417;n gi&#7843;n h&#417;n, m&agrave; c&ograve;n d&#7877; hi&#7875;u h&#417;n &#273;&#7875; &#273;&#7885;c hi&#7875;u c&aacute;c &#273;o&#7841;n code c&#7911;a b&#7841;n. L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -625,8 +625,8 @@ planets_df[positions, ]
 msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("positions",
-            incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh ch&iacute;nh x&aacute;c bi&#7871;n `positions` hay ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `sort(planets_df$diameter)`.&quot;)
-test_output_contains(&quot;planets_df[positions,]",
+            incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh ch&iacute;nh x&aacute;c bi&#7871;n `positions` hay ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `sort(planets_df$diameter)`.")
+test_output_contains("planets_df[positions,]",
                      incorrect_msg = "S&#7917; d&#7909;ng h&agrave;m `planets_df[positions, ]` &#273;&#7875; s&#7855;p x&#7871;p l&#7841;i th&#7913; t&#7921; `planets_df`; l&#432;u &yacute; s&#7917; d&#7909;ng d&#7845;u ph&#7849;y trong ngo&#7863;c vu&ocirc;ng!")
 success_msg("Tuy&#7879;t v&#7901;i! B&agrave;i t&#7853;p n&agrave;y k&#7871;t th&uacute;c ch&#432;&#417;ng n&oacute;i v&#7873; data frame. Nh&#7899; r&#7857;ng v&#7899;i R data frame l&agrave; ki&#7875;u d&#7919; li&#7879;u r&#7845;t quan trong b&#7903;i l&#7869; b&#7841;n s&#7869; ph&#7843;i s&#7917; d&#7909;ng data frame trong su&#7889;t qu&aacute; tr&igrave;nh ph&acirc;n t&iacute;ch d&#7919; li&#7879;u M&#7897;t ki&#7875;u c&#7845;u tr&uacute;c d&#7919; li&#7879;u th&#432;&#7901;ng g&#7863;p kh&aacute;c l&agrave; list, v&agrave; ch&uacute;ng ta s&#7869; t&igrave;m hi&#7875;u th&ecirc;m v&#7873; list trong ch&#432;&#417;ng ti&#7871;p theo.")
 ```
