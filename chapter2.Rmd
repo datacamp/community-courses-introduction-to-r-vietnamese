@@ -471,7 +471,7 @@ total_poker <- sum(poker_vector)
 # Tổng lời lãi từ việc chơi rulet
 total_roulette <-  
 
-# Tổng lời lại chung
+# Tổng lời lãi chung
 total_week <- 
 
 # Hiển thị kết quả total_week
@@ -830,9 +830,9 @@ test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_start", 
-            incorrect_msg = "C&oacute; v&#7867; nh&#432; `poker_start` kh&ocirc;ng ch&#7913;a ba gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a `poker_vector`.&#272;&#7875; l&agrave;m &#273;i&#7873;u n&agrave;y b&#7841;n cho `c(\&quot;Monday\&quot;, \&quot;Tuesday\&quot;, \&quot;Wednesday\&quot;)` v&agrave;o trong d&#7845;u ngo&#7863;c vu&ocirc;ng.")
-test_output_contains("mean(poker_start)", incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh v&agrave; in ra &#273;&uacute;ng gi&aacute; tr&#7883; trung b&igrave;nh c&#7911;a c&aacute;c gi&aacute; tr&#7883; trong `poker_start` ch&#432;a? D&ugrave;ng h&agrave;m `mean(poker_start)`.")
-success_msg("Gi&#7887;i l&#7855;m! Ngo&agrave;i vi&#7879;c chia nh&#7887; v&eacute;c-t&#417; theo th&#7913; b&#7853;c ho&#7863;c theo t&ecirc;n, b&#7841;n c&#361;ng c&oacute; th&#7875; l&agrave;m th&#7871; nh&#7901; vi&#7879;c so s&aacute;nh. B&agrave;i t&#7853;p ti&#7871;p theo s&#7869; d&#7841;y b&#7841;n c&aacute;ch l&agrave;m n&agrave;y!");
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `poker_start` kh&ocirc;ng ch&#7913;a ba gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a `poker_vector`. &#272;&#7875; l&agrave;m &#273;i&#7873;u n&agrave;y b&#7841;n cho c&aacute;c gi&aacute; tr&#7883; `c(\"Monday\", \"Tuesday\", \"Wednesday\")` v&agrave;o trong d&#7845;u ngo&#7863;c vu&ocirc;ng.")
+test_output_contains("mean(poker_start)", incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh v&agrave; hi&#7875;n th&#7883; ra m&agrave;n h&igrave;nh console &#273;&uacute;ng gi&aacute; tr&#7883; trung b&igrave;nh c&#7911;a `poker_start` ch&#432;a? D&ugrave;ng h&agrave;m `mean(poker_start)`.")
+success_msg("Gi&#7887;i l&#7855;m! Ngo&agrave;i vi&#7879;c chia nh&#7887; v&eacute;c-t&#417; theo th&#7913; ho&#7863;c theo t&ecirc;n, b&#7841;n c&#361;ng c&oacute; th&#7875; l&agrave;m th&#7871; nh&#7901; vi&#7879;c so s&aacute;nh. B&agrave;i t&#7853;p ti&#7871;p theo s&#7869; h&#432;&#7899;ng d&#7851;n b&#7841;n c&aacute;ch l&agrave;m n&agrave;y!");
 ```
 
 
