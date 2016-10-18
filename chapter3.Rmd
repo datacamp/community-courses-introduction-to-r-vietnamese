@@ -286,7 +286,7 @@ big_matrix <- cbind(matrix1, matrix2, vector1 ...)
 Biến `worldwide_vector` thành một cột mới tron `star_wars_matrix` và gán kết quả cho `all_wars_matrix`. Hãy sử dụng hàm [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) để làm điều này.
 
 *** =hint
-Trong bài tập này, ta phải nhét hai biến là `star_wars_matrix` và `worldwide_vector` vào `cbind()`, theo đúng thứ tự trên. Sau đó gán kết quả cho `all_wars_matrix`.
+Trong bài tập này, ta phải đưa hai biến là `star_wars_matrix` và `worldwide_vector` vào `cbind()`, theo đúng thứ tự trên. Sau đó gán kết quả cho `all_wars_matrix`.
 
 *** =pre_exercise_code
 ```{r}
@@ -480,8 +480,8 @@ Nếu bạn muốn chọn tất cả các dữ liệu của một dòng hoặc m
 Chúng ta hãy cùng trở lại với ví dụ Star Wars nhé! Giống với bài tập trước, bạn đã được cho sẵn `all_wars_matrix` trong workspace.
 
 *** =instructions
-- Chọn lọc doanh thu ngoài nước Mỹ của tất cả các bộ phim (đồng nghĩa với lấy toàn bộ cột thứ hai của `all_wars_matrix`), gán kết quả cho  `non_us_all`.
-- Sử dụng lệnh `mean()` cho `non_us_all` để tính doanh thu trung bình ở ngoài Mỹ của tất cả các bộ phim. Sau đó hiển thị kết quả đã tính đc.
+- Chọn doanh thu ngoài nước Mỹ của tất cả các bộ phim (đồng nghĩa với lấy toàn bộ cột thứ hai của `all_wars_matrix`), gán kết quả cho  `non_us_all`.
+- Sử dụng lệnh `mean()` cho `non_us_all` để tính doanh thu trung bình ở ngoài Mỹ của tất cả các bộ phim. Sau đó hiển thị kết quả đã tính được.
 - Tiếp đến, lọc ra doanh thu ngoài nước Mỹ của 2 tập phim đầu tiên trong `all_wars_matrix`. Gán kết quả đó cho `non_us_some`.
 - Sử dụng lệnh `mean()` để tính trung bình các giá trị trong `non_us_some`.
 
@@ -672,7 +672,7 @@ test_object("visitors",
 test_object("us_visitors", incorrect_msg = "&#272;&#7875; t&#7841;o `us_visitors`, b&#7841;n ph&#7843;i ch&#7885;n t&#7845;t c&#7843; d&#7919; li&#7879;u c&#7911;a c&#7897;t &#273;&#7847;u ti&ecirc;n trong `visitors`. &#272;&#7875; l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u &#273;&oacute; h&atilde;y d&ugrave;ng `[,1]`!")
 test_output_contains("mean(us_visitors)", incorrect_msg = "Sau khi b&#7841;n &#273;&atilde; t&#7841;o `us_visitors`, h&atilde;y d&ugrave;ng `mean()` &#273;&#7875; t&iacute;nh s&#7889; l&#432;&#7907;ng ng&#432;&#7901;i xem phim t&#7841;i M&#7929;. H&atilde;y nh&#7899; hi&#7875;n th&#7883; k&#7871;t qu&#7843; t&iacute;nh &#273;&#432;&#7907;c.")
 
-success_msg("Ch&#432;&#417;ng v&#7873; ma tr&#7853;n &#273;&#7871;n &#273;&acirc;y l&agrave; k&#7871;t th&uacute;c. T&#7841;i ch&#432;&#417;ng ti&#7871;p theo b&#7841;n s&#7869; &#273;&#432;&#7907;c ti&#7871;p x&uacute;c v&#7899;i m&#7897;t &#273;&#7883;nh ngh&#297;a kh&aacute;c trong ng&ocirc;n ng&#7919; R, &#273;&oacute; l&agrave; factor.")
+success_msg("Ch&#432;&#417;ng v&#7873; ma tr&#7853;n &#273;&#7871;n &#273;&acirc;y l&agrave; k&#7871;t th&uacute;c. T&#7841;i ch&#432;&#417;ng ti&#7871;p theo b&#7841;n s&#7869; &#273;&#432;&#7907;c ti&#7871;p x&uacute;c v&#7899;i m&#7897;t kh&aacute;i ni&#7879;m kh&aacute;c trong ng&ocirc;n ng&#7919; R, &#273;&oacute; l&agrave; factor.")
 ```
 
 
