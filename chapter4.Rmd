@@ -38,7 +38,7 @@ theory <- "factors for categorical variables"
 
 *** =sct
 ```{r}
-test_object("theory", incorrect_msg = "Ki&#7875;m tra l&#7841;i chu&#7895;i gi&aacute; tr&#7883; `"factors for categorical variables"` g&aacute;n cho bi&#7871;n `theory`. L&#432;u &yacute; r&#7857;ng R c&oacute; ph&acirc;n bi&#7879;t ch&#7919; hoa v&agrave; ch&#7919; th&#432;&#7901;ng.");
+test_object("theory", incorrect_msg = "Ki&#7875;m tra l&#7841;i chu&#7895;i gi&aacute; tr&#7883; `\"factors for categorical variables\"` g&aacute;n cho bi&#7871;n `theory`. L&#432;u &yacute; r&#7857;ng R c&oacute; ph&acirc;n bi&#7879;t ch&#7919; hoa v&agrave; ch&#7919; th&#432;&#7901;ng.");
 success_msg("R&#7845;t t&#7889;t! B&#7841;n &#273;&atilde; s&#7861;n s&agrave;ng ch&#432;a? Ti&#7871;p t&#7909;c b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
