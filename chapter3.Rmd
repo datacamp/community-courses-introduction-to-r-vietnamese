@@ -45,10 +45,10 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 *** =sct
 ```{r}
 test_function("matrix", c("data", "byrow", "nrow"),
-              incorrect_msg = "Bạn đã tạo đúng ma trận chưa? Bạn đọc kỹ hướng dẫn nhé, câu trả lời đã được cho rồi đấy!")
+              incorrect_msg = "B&#7841;n &#273;&atilde; t&#7841;o &#273;&uacute;ng ma tr&#7853;n ch&#432;a? B&#7841;n &#273;&#7885;c k&#7929; h&#432;&#7899;ng d&#7851;n nh&eacute;, c&acirc;u tr&#7843; l&#7901;i &#273;&atilde; &#273;&#432;&#7907;c cho r&#7891;i &#273;&#7845;y!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "Hình như định nghĩa của ma trận có vấn đề. Bạn đọc kỹ hướng dẫn nhé, câu trả lời đã được cho rồi đấy!")
-success_msg("Tuyệt! Sang bài tập tiếp theo nào.")
+                     incorrect_msg = "H&igrave;nh nh&#432; &#273;&#7883;nh ngh&#297;a c&#7911;a ma tr&#7853;n c&oacute; v&#7845;n &#273;&#7873;. B&#7841;n &#273;&#7885;c k&#7929; h&#432;&#7899;ng d&#7851;n nh&eacute;, c&acirc;u tr&#7843; l&#7901;i &#273;&atilde; &#273;&#432;&#7907;c cho r&#7891;i &#273;&#7845;y!")
+success_msg("Tuy&#7879;t! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -105,20 +105,20 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
 
 *** =sct
 ```{r}
-msg <- "Đừng thay đổi nội dung các biến `new_hope`, `empire_strikes` và `return_jedi`!"
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&aacute;c bi&#7871;n `new_hope`, `empire_strikes` v&agrave; `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("box_office", incorrect_msg = "Bạn đã gộp đúng các giá trị trong `new_hope`, `empire_strikes` và `return_jedi` vào véc-tơ `box_office`? chưa")
+test_object("box_office", incorrect_msg = "B&#7841;n &#273;&atilde; g&#7897;p &#273;&uacute;ng c&aacute;c gi&aacute; tr&#7883; trong `new_hope`, `empire_strikes` v&agrave; `return_jedi` v&agrave;o v&eacute;c-t&#417; `box_office`? ch&#432;a")
 
 test_function("matrix", c("data", "nrow", "byrow"),
-              incorrect_msg = "Bạn hãy nhớ đặt đúng các tham số trong hàm `matrix()`: `box_office`, `nrow = 3`, `by_row = TRUE`.")
+              incorrect_msg = "B&#7841;n h&atilde;y nh&#7899; &#273;&#7863;t &#273;&uacute;ng c&aacute;c tham s&#7889; trong h&agrave;m `matrix()`: `box_office`, `nrow = 3`, `by_row = TRUE`.")
 
 test_object("star_wars_matrix",
-            incorrect_msg = "Bạn đã gán kết quả của câu lệnh `matrix()` cho `star_wars_matrix` chưa?")
+            incorrect_msg = "B&#7841;n &#273;&atilde; g&aacute;n k&#7871;t qu&#7843; c&#7911;a c&acirc;u l&#7879;nh `matrix()` cho `star_wars_matrix` ch&#432;a?")
 
-success_msg("Đúng là may mắn đang ở bên bạn! Sang bài tập tiếp theo nhé.")
+success_msg("&#272;&uacute;ng l&agrave; may m&#7855;n &#273;ang &#7903; b&ecirc;n b&#7841;n! Sang b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -198,19 +198,19 @@ star_wars_matrix
 
 *** =sct
 ```{r}
-msg <- "Đừng thay đổi gì trong `new_hope`, `empire_strikes` và `return_jedi`!"
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i g&igrave; trong `new_hope`, `empire_strikes` v&agrave; `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
-msg <- "Đừng sửa nội dung của `star_wars_matrix`; mà chỉ đặt tên cho các dòng và cột!" 
+msg <- "&#272;&#7915;ng s&#7917;a n&#7897;i dung c&#7911;a `star_wars_matrix`; m&agrave; ch&#7881; &#273;&#7863;t t&ecirc;n cho c&aacute;c d&ograve;ng v&agrave; c&#7897;t!" 
 test_object("star_wars_matrix", incorrect_msg = msg)
-msg <- "Đừng thay đổi gì trong hai véc-tơ đã được cho sẵn là `region` và `titles` ."
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i g&igrave; trong hai v&eacute;c-t&#417; &#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n l&agrave; `region` v&agrave; `titles`."
 test_object("region", undefined_msg = msg, incorrect_msg = msg)
 test_object("titles", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", eq_condition = "equal",
-            incorrect_msg = "Bạn đã đặt đúng tên cột và dòng cho `star_wars_matrix` chưa? Sử dụng `colnames(star_wars_matrix) <- region` để đặt tên cột; làm điều tương tự với dòng.")
-test_output_contains("star_wars_matrix", incorrect_msg = "Đừng quên in ra kết quả của `star_wars_matrix` sau khi đã đặt tên xong.")
-success_msg("Tuyệt lắm! Bạn sắp thành một Jedi trong lĩnh vực R rồi đấy! Sang bài tập tiếp theo nào.")
+            incorrect_msg = "B&#7841;n &#273;&atilde; &#273;&#7863;t &#273;&uacute;ng t&ecirc;n c&#7897;t v&agrave; d&ograve;ng cho `star_wars_matrix` ch&#432;a? S&#7917; d&#7909;ng `colnames(star_wars_matrix) &lt;- region` &#273;&#7875; &#273;&#7863;t t&ecirc;n c&#7897;t; l&agrave;m &#273;i&#7873;u t&#432;&#417;ng t&#7921; v&#7899;i d&ograve;ng.")
+test_output_contains("star_wars_matrix", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n in ra k&#7871;t qu&#7843; c&#7911;a `star_wars_matrix` sau khi &#273;&atilde; &#273;&#7863;t t&ecirc;n xong.")
+success_msg("Tuy&#7879;t l&#7855;m! B&#7841;n s&#7855;p th&agrave;nh m&#7897;t Jedi trong l&#297;nh v&#7921;c R r&#7891;i &#273;&#7845;y! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -257,17 +257,17 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
                                            c("US", "non-US")))
 
-# Tổng doanh thu toàn cầu
+# Tính tổng doanh thu toàn cầu
 worldwide_vector <- rowSums(star_wars_matrix)
 ```
 
 *** =sct
 ```{r}
-msg <- "Đừng sửa nội dung của các biến `box_office_all` và `star_wars_marix`được cho sẵn!"
+msg <- "&#272;&#7915;ng s&#7917;a n&#7897;i dung c&#7911;a c&aacute;c bi&#7871;n `box_office_all` v&agrave; `star_wars_marix`&#273;&#432;&#7907;c cho s&#7861;n!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
-test_object("worldwide_vector", incorrect_msg = "Dùng hàm `rowSums()` với `star_wars_matrix` rồi chứa kết quả vào `worldwide_vector`.")
-success_msg("Làm tốt lắm! Sang bài tập tiếp theo nào.")
+test_object("worldwide_vector", incorrect_msg = "D&ugrave;ng h&agrave;m `rowSums()` v&#7899;i `star_wars_matrix` r&#7891;i ch&#7913;a k&#7871;t qu&#7843; v&agrave;o `worldwide_vector`.")
+success_msg("L&agrave;m t&#7889;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -325,15 +325,15 @@ all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 
 *** =sct
 ```{r}
-msg <- "Đừng thay đổi nội dung của các biến `box_office_all` và `star_wars_marix` đã được cho sẵn!"
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a c&aacute;c bi&#7871;n `box_office_all` v&agrave; `star_wars_marix` &#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("worldwide_vector",
-            incorrect_msg = "Chứa kết quả của `rowSums(star_wars_matrix)` vào trong `worldwide_vector`.")
+            incorrect_msg = "Ch&#7913;a k&#7871;t qu&#7843; c&#7911;a `rowSums(star_wars_matrix)` v&agrave;o trong `worldwide_vector`.")
 
-msg <- "Bạn đã sử dụng `cbind()` một cách chính xác để đưa `worldwide_vector` vào `star_wars_matrix`? Bạn phải đưa `star_wars_matrix` và `world_wide_vector` vào hàm `cbind()` theo đúng thứ tự trên. Ma trận mới `all_wars_matrix` phải có ba dòng và 3 cột."
+msg <- "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng `cbind()` m&#7897;t c&aacute;ch ch&iacute;nh x&aacute;c &#273;&#7875; &#273;&#432;a `worldwide_vector` v&agrave;o `star_wars_matrix`? B&#7841;n ph&#7843;i &#273;&#432;a `star_wars_matrix` v&agrave; `world_wide_vector` v&agrave;o h&agrave;m `cbind()` theo &#273;&uacute;ng th&#7913; t&#7921; tr&ecirc;n. Ma tr&#7853;n m&#7899;i `all_wars_matrix` ph&#7843;i c&oacute; ba d&ograve;ng v&agrave; 3 c&#7897;t."
 test_object("all_wars_matrix", incorrect_msg = msg)
-success_msg("Làm tốt lắm! Sau khi thêm cột và ma trận thì bước tiếp theo hiển nhiên là thêm dòng. Chúng ta sẽ học cách làm điều đó trong bài tập tiếp theo.");
+success_msg("L&agrave;m t&#7889;t l&#7855;m! Sau khi th&ecirc;m c&#7897;t v&agrave; ma tr&#7853;n th&igrave; b&#432;&#7899;c ti&#7871;p theo hi&#7875;n nhi&ecirc;n l&agrave; th&ecirc;m d&ograve;ng. Ch&uacute;ng ta s&#7869; h&#7885;c c&aacute;ch l&agrave;m &#273;i&#7873;u &#273;&oacute; trong b&agrave;i t&#7853;p ti&#7871;p theo.")
 ```
 
 
@@ -403,12 +403,12 @@ all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 
 *** =sct
 ```{r}
-msg = "Đừng thay đổi nội dung của các biến đã được cho sẵn (`star_wars_matrix` and `star_wars_matrix2`)."
+msg = "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a c&aacute;c bi&#7871;n &#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n (`star_wars_matrix` and `star_wars_matrix2`)."
 test_object("star_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix2", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("all_wars_matrix", incorrect_msg = "Bạn đã sử dụng hàm `rbind()` một cách chính xác để tạo ma trận `all_wars_matrix()`? `rbind()` phải chứa hai tham số là `star_wars_matrix` and `star_wars_matrix2`, theo đúng thứ tự đó.")
+test_object("all_wars_matrix", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `rbind()` m&#7897;t c&aacute;ch ch&iacute;nh x&aacute;c &#273;&#7875; t&#7841;o ma tr&#7853;n `all_wars_matrix()`? `rbind()` ph&#7843;i ch&#7913;a hai tham s&#7889; l&agrave; `star_wars_matrix` and `star_wars_matrix2`, theo &#273;&uacute;ng th&#7913; t&#7921; &#273;&oacute;.")
 
-success_msg("Tuyệt vời! Ở bài tập tiếp đây bạn sẽ học cách tổng hợp kết quả của hai hàm `rbind()` và `colSums()`!")
+success_msg("Tuy&#7879;t v&#7901;i! &#7902; b&agrave;i t&#7853;p ti&#7871;p &#273;&acirc;y b&#7841;n s&#7869; h&#7885;c c&aacute;ch t&#7893;ng h&#7907;p k&#7871;t qu&#7843; c&#7911;a hai h&agrave;m `rbind()` v&agrave; `colSums()`!")
 ```
 
 
@@ -434,7 +434,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars
 # all_wars_matrix đã được cho sẵn trong workspace của bạn
 all_wars_matrix
 
-# Tổng doanh thu vé bán ở trong và ngoài Mỹ
+# Tổng doanh thu bán vé ở trong và ngoài nước Mỹ
 total_revenue_vector <- 
   
 # Hiển thị kết quả của total_revenue_vector
@@ -445,7 +445,7 @@ total_revenue_vector <-
 # all_wars_matrix đã được cho sẵn trong workspace của bạn
 all_wars_matrix
 
-# Tổng doanh thu vé bán ở trong và ngoài Mỹ
+# Tổng doanh thu bán vé ở trong và ngoài nước Mỹ
 total_revenue_vector <- colSums(all_wars_matrix)
 
 # Hiển thị kết quả của total_revenue_vector
@@ -454,13 +454,13 @@ total_revenue_vector
 
 *** =sct
 ```{r}
-msg = "Đừng thay đổi nội dung của `all_wars_matrix`đã được cho sẵn trong workspace."
+msg = "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a `all_wars_matrix`&#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n trong workspace."
 test_object("all_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_function("colSums", "x", incorrect_msg = "Bạn đã sử dụng hàm `colSums()` để biến đổi ma trận all_wars_matrix?")
+test_function("colSums", "x", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `colSums()` &#273;&#7875; bi&#7871;n &#273;&#7893;i ma tr&#7853;n all_wars_matrix?")
 test_object("total_revenue_vector",
-            incorrect_msg = "Bạn đã gán đúng kết quả của câu lệnh `colSums(all_wars_matrix)` cho `total_revenue_vector`?")
-test_output_contains("total_revenue_vector", incorrect_msg = "Nhớ hiển thị kết quả cho `total_revenue_vector`!")
-success_msg("Tốt lắm! Sang bài tập tiếp theo để học cách tạo tập con cho ma trận.")
+            incorrect_msg = "B&#7841;n &#273;&atilde; g&aacute;n &#273;&uacute;ng k&#7871;t qu&#7843; c&#7911;a c&acirc;u l&#7879;nh `colSums(all_wars_matrix)` cho `total_revenue_vector`?")
+test_output_contains("total_revenue_vector", incorrect_msg = "Nh&#7899; hi&#7875;n th&#7883; k&#7871;t qu&#7843; cho `total_revenue_vector`!")
+success_msg("T&#7889;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo &#273;&#7875; h&#7885;c c&aacute;ch t&#7841;o t&#7853;p con cho ma tr&#7853;n.")
 ```
 
 
@@ -519,7 +519,7 @@ all_wars_matrix
 # Tìm doanh thu ngoài nước Mỹ của tất cả các bộ phim
 non_us_all <- all_wars_matrix[,2]
   
-# Tìm doanh thu ngoài nước Mỹ của hai bộ phim đầu tiên
+# Doanh thu trung bình ở ngoài nước Mỹ
 mean(non_us_all)
   
 # Tìm doanh thu ngoài nước Mỹ của hai bộ phim đầu tiên
@@ -531,18 +531,18 @@ mean(non_us_some)
 
 *** =sct
 ```{r}
-msg = "Đừng thay đổi nội dung của `all_wars_matrix`đã được cho sẵn trong workspace."
+msg = "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a `all_wars_matrix`&#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n trong workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("non_us_all",
-            incorrect_msg = "Bạn đã gán cho `non_us_all` dữ liệu của cả cột thứ hai của `all_wars_matrix`? Để làm điều đó bạn dùng `[, 2]`")
+            incorrect_msg = "B&#7841;n &#273;&atilde; g&aacute;n cho `non_us_all` d&#7919; li&#7879;u c&#7911;a c&#7843; c&#7897;t th&#7913; hai c&#7911;a `all_wars_matrix`? &#272;&#7875; l&agrave;m &#273;i&#7873;u &#273;&oacute; b&#7841;n d&ugrave;ng `[, 2]`")
 test_output_contains("mean(non_us_all)",
-                     incorrect_msg = "Bạn đã tính giá trị trung bình của các giá trị trong `non_us_all` bằng cách dùng hàm `mean(non_us_all)` chưa? Nhớ hiển thị ra kết quả cuối cùng nhé.")
+                     incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh gi&aacute; tr&#7883; trung b&igrave;nh c&#7911;a c&aacute;c gi&aacute; tr&#7883; trong `non_us_all` b&#7857;ng c&aacute;ch d&ugrave;ng h&agrave;m `mean(non_us_all)` ch&#432;a? Nh&#7899; hi&#7875;n th&#7883; ra k&#7871;t qu&#7843; cu&#7889;i c&ugrave;ng nh&eacute;.")
 test_object("non_us_some",
-            incorrect_msg = "Bạn đã gán doanh thu ngoài nước Mỹ của hai bộ phim đầu tiên cho `non_us_some` chưa? Để làm điều đó bạn dùng `[1:2,2]`")
+            incorrect_msg = "B&#7841;n &#273;&atilde; g&aacute;n doanh thu ngo&agrave;i n&#432;&#7899;c M&#7929; c&#7911;a hai b&#7897; phim &#273;&#7847;u ti&ecirc;n cho `non_us_some` ch&#432;a? &#272;&#7875; l&agrave;m &#273;i&#7873;u &#273;&oacute; b&#7841;n d&ugrave;ng `[1:2,2]`")
 test_output_contains("mean(non_us_some)",
-                     incorrect_msg = "Bạn đã tính trung bình của các giá trị trong `non_us_some` bằng `mean(non_us_some)`? Nhớ hiển thị ra kết quả cuối cùng nhé.")
-success_msg("Tuyệt vời! Cùng sang bài tập tiếp theo nhé.")
+                     incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh trung b&igrave;nh c&#7911;a c&aacute;c gi&aacute; tr&#7883; trong `non_us_some` b&#7857;ng `mean(non_us_some)`? Nh&#7899; hi&#7875;n th&#7883; ra k&#7871;t qu&#7843; cu&#7889;i c&ugrave;ng nh&eacute;.")
+success_msg("Tuy&#7879;t v&#7901;i! C&ugrave;ng sang b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -593,13 +593,13 @@ visitors
 
 *** =sct
 ```{r}
-msg = "Đừng thay đổi nội dung của `all_wars_matrix`đã được cho sẵn trong workspace."
+msg = "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a `all_wars_matrix`&#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n trong workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "Hình như kết quả của `visitors` là chưa chính xác. Bạn chỉ cần chia `all_wars_matrix` cho 5 và gán kết quả đó cho `visitors`.")
-test_output_contains("visitors", incorrect_msg = "Đừng quên hiển thị kết quả cho `visitors`.")
-success_msg("Tuyệt lắm! Bạn đọc được gì từ kết quả ở trên? Có tận 92 triệu người đã đi xem phim A New Hope tại các rạp chiếu phim ở Mỹ! Cùng sang bài tập tiếp theo nhé.")
+            incorrect_msg = "H&igrave;nh nh&#432; k&#7871;t qu&#7843; c&#7911;a `visitors` l&agrave; ch&#432;a ch&iacute;nh x&aacute;c. B&#7841;n ch&#7881; c&#7847;n chia `all_wars_matrix` cho 5 v&agrave; g&aacute;n k&#7871;t qu&#7843; &#273;&oacute; cho `visitors`.")
+test_output_contains("visitors", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; k&#7871;t qu&#7843; cho `visitors`.")
+success_msg("Tuy&#7879;t l&#7855;m! B&#7841;n &#273;&#7885;c &#273;&#432;&#7907;c g&igrave; t&#7915; k&#7871;t qu&#7843; &#7903; tr&ecirc;n? C&oacute; t&#7853;n 92 tri&#7879;u ng&#432;&#7901;i &#273;&atilde; &#273;i xem phim A New Hope t&#7841;i c&aacute;c r&#7841;p chi&#7871;u phim &#7903; M&#7929;! C&ugrave;ng sang b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -663,16 +663,16 @@ mean(us_visitors)
 
 *** =sct
 ```{r}
-msg <- "Đừng thay đổi nội dung của `all_wars_matrix`đã được cho sẵn trong workspace."
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a `all_wars_matrix`&#273;&atilde; &#273;&#432;&#7907;c cho s&#7861;n trong workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("ticket_prices_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "Bạn đã tạo chính xác ma trận `visitors` matrix? Bạn chỉ cần chia `all_wars_matrix` cho `ticket_prices_matrix`.")
-test_object("us_visitors", incorrect_msg = "Để tạo `us_visitors`, bạn phải chọn tất cả dữ liệu của cột đầu tiên trong `visitors`. Để làm được điều đó hãy dùng `[,1]`!")
-test_output_contains("mean(us_visitors)", incorrect_msg = "Sau khi bạn đã tạo `us_visitors`, hãy dùng `mean()` để tính số lượng người xem phim tại Mỹ. Hãy nhớ hiển thị kết quả tính được.")
+            incorrect_msg = "B&#7841;n &#273;&atilde; t&#7841;o ch&iacute;nh x&aacute;c ma tr&#7853;n `visitors` matrix? B&#7841;n ch&#7881; c&#7847;n chia `all_wars_matrix` cho `ticket_prices_matrix`.")
+test_object("us_visitors", incorrect_msg = "&#272;&#7875; t&#7841;o `us_visitors`, b&#7841;n ph&#7843;i ch&#7885;n t&#7845;t c&#7843; d&#7919; li&#7879;u c&#7911;a c&#7897;t &#273;&#7847;u ti&ecirc;n trong `visitors`. &#272;&#7875; l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u &#273;&oacute; h&atilde;y d&ugrave;ng `[,1]`!")
+test_output_contains("mean(us_visitors)", incorrect_msg = "Sau khi b&#7841;n &#273;&atilde; t&#7841;o `us_visitors`, h&atilde;y d&ugrave;ng `mean()` &#273;&#7875; t&iacute;nh s&#7889; l&#432;&#7907;ng ng&#432;&#7901;i xem phim t&#7841;i M&#7929;. H&atilde;y nh&#7899; hi&#7875;n th&#7883; k&#7871;t qu&#7843; t&iacute;nh &#273;&#432;&#7907;c.")
 
-success_msg("Chương về ma trận đến đây là kết thúc. Tại chương tiếp theo bạn sẽ được tiếp xúc với một định nghĩa khác trong ngôn ngữ R, đó là factor.")
+success_msg("Ch&#432;&#417;ng v&#7873; ma tr&#7853;n &#273;&#7871;n &#273;&acirc;y l&agrave; k&#7871;t th&uacute;c. T&#7841;i ch&#432;&#417;ng ti&#7871;p theo b&#7841;n s&#7869; &#273;&#432;&#7907;c ti&#7871;p x&uacute;c v&#7899;i m&#7897;t &#273;&#7883;nh ngh&#297;a kh&aacute;c trong ng&ocirc;n ng&#7919; R, &#273;&oacute; l&agrave; factor.")
 ```
 
 

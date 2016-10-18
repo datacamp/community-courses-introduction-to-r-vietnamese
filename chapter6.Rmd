@@ -37,7 +37,7 @@ Click 'Submit Answer' để bắt đầu tìm hiểu kiến thức về list!
 
 *** =sct
 ```{r}
-success_msg("Sẵn sàng! Xử lý bài tập tiếp theo nào.")
+success_msg("S&#7861;n s&agrave;ng! X&#7917; l&yacute; b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -74,7 +74,7 @@ Click 'Submit Answer' để bắt đầu bài tập đầu tiên về  list.
 
 *** =sct
 ```{r}
-success_msg("Tốt lắm. Bắt đầu thực hành nhé!")
+success_msg("T&#7889;t l&#7855;m. B&#7855;t &#273;&#7847;u th&#7921;c h&agrave;nh nh&eacute;!")
 ```
 
 
@@ -132,13 +132,13 @@ my_list <- list(my_vector, my_matrix, my_df)
 
 *** =sct
 ```{r}
-msg = "Không thay đổi các giá trị của `my_vector`, `my_matrix` or `my_df`!"
+msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c gi&aacute; tr&#7883; c&#7911;a `my_vector`, `my_matrix` or `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "Có vẻ như `my_list` không chứa chính xác các đối tượng. Hãy chắc chắn rằng bạn đã sử dụng các biến `my_vector`, `my_matrix` và `my_df` trong hàm `list()` và ngăn cách chúng bởi dấu phẩy.")
-success_msg("Tuyệt vời! Làm bài tập tiếp theo nhé.")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `my_list` kh&ocirc;ng ch&#7913;a ch&iacute;nh x&aacute;c c&aacute;c &#273;&#7889;i t&#432;&#7907;ng. H&atilde;y ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n &#273;&atilde; s&#7917; d&#7909;ng c&aacute;c bi&#7871;n `my_vector`, `my_matrix` v&agrave; `my_df` trong h&agrave;m `list()` v&agrave; ng&#259;n c&aacute;ch ch&uacute;ng b&#7903;i d&#7845;u ph&#7849;y.")
+success_msg("Tuy&#7879;t v&#7901;i! L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -214,18 +214,16 @@ my_list
 
 *** =sct
 ```{r}
-msg = "Không thay đổi các giá trị củ `my_vector`, `my_matrix` và `my_df`!"
+msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c gi&aacute; tr&#7883; c&#7911; `my_vector`, `my_matrix` v&agrave; `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "It looks like `my_list` does not contain the correct elements.")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `my_list` kh&ocirc;ng ch&#7913;a ch&iacute;nh x&aacute;c c&aacute;c &#273;&#7889;i t&#432;&#7907;ng. ")
 test_object("my_list", eq_condition = "equal",
-            incorrect_msg = "Có vẻ như `my_list` không chứa chính xác 
-            các đối tượng. Hãy chắc chắn rằng bạn đã sử dụng các biến 
-            `my_vector`, `my_matrix` và `my_df` trong hàm `list()` . Chắc chắn rằng bạn sử dụng tên `vec`, `mat` và `df` theo thứ tự.");
-test_output_contains("my_list", incorrect_msg = "Đừng quên hiển thị `my_list` trên màn hình tương tác! Đơn giản là thêm `my_list` ở trên editor.")
-success_msg("Tuyệt vời! Bạn không chỉ biết cách tạo list, bạn còn biết cách đặt tên cho chúng nữa rồi! Trăm hay không bằng tay quen. Xem tiếp bài tập tiếp theo nhé!")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `my_list` kh&ocirc;ng ch&#7913;a ch&iacute;nh x&aacute;c c&aacute;c &#273;&#7889;i t&#432;&#7907;ng. H&atilde;y ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n &#273;&atilde; s&#7917; d&#7909;ng c&aacute;c bi&#7871;n `my_vector`, `my_matrix` v&agrave; `my_df` trong h&agrave;m `list()` . Ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n s&#7917; d&#7909;ng t&ecirc;n `vec`, `mat` v&agrave; `df` theo th&#7913; t&#7921;.");
+test_output_contains("my_list", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; `my_list` tr&ecirc;n m&agrave;n h&igrave;nh t&#432;&#417;ng t&aacute;c! &#272;&#417;n gi&#7843;n l&agrave; th&ecirc;m `my_list` &#7903; tr&ecirc;n editor.")
+success_msg("Tuy&#7879;t v&#7901;i! B&#7841;n kh&ocirc;ng ch&#7881; bi&#7871;t c&aacute;ch t&#7841;o list, b&#7841;n c&ograve;n bi&#7871;t c&aacute;ch &#273;&#7863;t t&ecirc;n cho ch&uacute;ng n&#7919;a r&#7891;i! Tr&#259;m hay kh&ocirc;ng b&#7857;ng tay quen. Xem ti&#7871;p b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
 
@@ -278,11 +276,11 @@ shining_list <- list(moviename = mov, actors = act, reviews = rev)
 
 *** =sct
 ```{r}
-msg = "Không thay đổi các giá trị các biến đã khởi tạo!"
+msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c gi&aacute; tr&#7883; c&aacute;c bi&#7871;n &#273;&atilde; kh&#7903;i t&#7841;o!"
 lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list",eq_condition = "equal",
-            incorrect_msg = "Có vẻ như `shining_list` không chứa các đối tượng chính xác. Các đối tượng lần lượt là `mov`, `act`, và `rev`.")
-success_msg("Tuyệt vời! Giờ bạn đã biết cách khởi tạo và đặt tên list. Tương tự như chương trước, chúng ta hãy học cách lấy các giá trị từ list")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `shining_list` kh&ocirc;ng ch&#7913;a c&aacute;c &#273;&#7889;i t&#432;&#7907;ng ch&iacute;nh x&aacute;c. C&aacute;c &#273;&#7889;i t&#432;&#7907;ng l&#7847;n l&#432;&#7907;t l&agrave; `mov`, `act`, v&agrave; `rev`.")
+success_msg("Tuy&#7879;t v&#7901;i! Gi&#7901; b&#7841;n &#273;&atilde; bi&#7871;t c&aacute;ch kh&#7903;i t&#7841;o v&agrave; &#273;&#7863;t t&ecirc;n list. T&#432;&#417;ng t&#7921; nh&#432; ch&#432;&#417;ng tr&#432;&#7899;c, ch&uacute;ng ta h&atilde;y h&#7885;c c&aacute;ch l&#7845;y c&aacute;c gi&aacute; tr&#7883; t&#7915; list.")
 ```
 
 
@@ -344,11 +342,11 @@ shining_list$actors[2]
 
 *** =sct
 ```{r}
-msg <- "Không thay đối giá trị list `shining_list!"
+msg <- "Kh&ocirc;ng thay &#273;&#7889;i gi&aacute; tr&#7883; list `shining_list!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("shining_list$actors", incorrect_msg = "Bạn có lựa chọn chính xác véc-tơ chứa actors? Bạn có thể sử dụng câu lệnh `shining_list$actors`")
-test_output_contains("shining_list$actors[2]", incorrect_msg = "Để lựa chọn diễn viên thứ 2 từ véc-tơ actors, bạn có thể thực hiện như sau: `shining_list$actors` cho phép hiển thị véc-tơ actors, sau đó bạn có thể thêm `[2]` để lựa chọn giá trị thứ 2.")
-success_msg("Tuyệt vời! Lựa chọn giá trị từ list cũng dễ thôi đúng không? Làm bài tập tiếp theo nhé!")
+test_output_contains("shining_list$actors", incorrect_msg = "B&#7841;n c&oacute; l&#7921;a ch&#7885;n ch&iacute;nh x&aacute;c v&eacute;c-t&#417; ch&#7913;a actors? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng c&acirc;u l&#7879;nh `shining_list$actors`")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "&#272;&#7875; l&#7921;a ch&#7885;n di&#7877;n vi&ecirc;n th&#7913; 2 t&#7915; v&eacute;c-t&#417; actors, b&#7841;n c&oacute; th&#7875; th&#7921;c hi&#7879;n nh&#432; sau: `shining_list$actors` cho ph&eacute;p hi&#7875;n th&#7883; v&eacute;c-t&#417; actors, sau &#273;&oacute; b&#7841;n c&oacute; th&#7875; th&ecirc;m `[2]` &#273;&#7875; l&#7921;a ch&#7885;n gi&aacute; tr&#7883; th&#7913; 2.")
+success_msg("Tuy&#7879;t v&#7901;i! L&#7921;a ch&#7885;n gi&aacute; tr&#7883; t&#7915; list c&#361;ng d&#7877; th&ocirc;i &#273;&uacute;ng kh&ocirc;ng? L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
 
@@ -415,13 +413,13 @@ str(shining_list_full)
 
 *** =sct
 ```{r}
-msg = "Không thay đổi các giá trị `shining_list!"
+msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c gi&aacute; tr&#7883; `shining_list!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list_full", eq_condition = "equal",
-            incorrect_msg = paste("Bạn đã thêm biến `year` vào trong `shining_list` một cách chính xác chưa,",
-                                  "giá trị của year là 1980? Bạn có thể sử dụng `c(shining_list, year = 1980)`"))
-test_function("str", "object", incorrect_msg = "Đừng quên hiển thị cấu trúc list `shining_list_full` với câu lệnh `str()`.")
-success_msg("Tuyệt vời! Đây là bài tập cuối cùng về list. Giờ bạn đã có một kiến thức cơ bản vững chắc về lập trình ngôn ngữ với R. Tuy nhiên còn rất nhiều thứ còn có thể học được nữa. Hay xem thử các khóa học của Data Camp và chúc bạn sớm trở thành một chuyên gia phân tích dữ liệu!")
+            incorrect_msg = paste("B&#7841;n &#273;&atilde; th&ecirc;m bi&#7871;n `year` v&agrave;o trong `shining_list` m&#7897;t c&aacute;ch ch&iacute;nh x&aacute;c ch&#432;a,",
+                                  "gi&aacute; tr&#7883; c&#7911;a year l&agrave; 1980? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `c(shining_list, year = 1980)`"))
+test_function("str", "object", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; c&#7845;u tr&uacute;c list `shining_list_full` v&#7899;i c&acirc;u l&#7879;nh `str()`.")
+success_msg("Tuy&#7879;t v&#7901;i! &#272;&acirc;y l&agrave; b&agrave;i t&#7853;p cu&#7889;i c&ugrave;ng v&#7873; list. Gi&#7901; b&#7841;n &#273;&atilde; c&oacute; m&#7897;t ki&#7871;n th&#7913;c c&#417; b&#7843;n v&#7919;ng ch&#7855;c v&#7873; l&#7853;p tr&igrave;nh ng&ocirc;n ng&#7919; v&#7899;i R. Tuy nhi&ecirc;n c&ograve;n r&#7845;t nhi&#7873;u th&#7913; c&ograve;n c&oacute; th&#7875; h&#7885;c &#273;&#432;&#7907;c n&#7919;a. Hay xem th&#7917; c&aacute;c kh&oacute;a h&#7885;c c&#7911;a Data Camp v&agrave; ch&uacute;c b&#7841;n s&#7899;m tr&#7903; th&agrave;nh m&#7897;t chuy&ecirc;n gia ph&acirc;n t&iacute;ch d&#7919; li&#7879;u!")
 ```
 
 
