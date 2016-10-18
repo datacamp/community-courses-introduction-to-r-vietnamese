@@ -232,7 +232,7 @@ test_object("survey_vector", undefined_msg = msg, incorrect_msg = msg)
 msg = "Kh&ocirc;ng ch&#7881;nh s&#7917;a c&aacute;c c&acirc;u l&#7879;nh t&#7841;o factor."
 test_function("factor", "x", not_called_msg = msg, incorrect_msg = msg)
 test_object("factor_survey_vector", eq_condition = "equal",
-            incorrect_msg = paste("B&#7841;n c&oacute; g&aacute;n gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c c&#7911;a factor cho `factor_survey_vector` ch&#432;a? S&#7917; d&#7909;ng h&agrave;m `levels(factor_survey_vector) &lt;- c("Female", "Male")`. Nh&#7899; r&#7857;ng R c&oacute; ph&acirc;n bi&#7879;t ch&#7919; in hoa v&agrave; ch&#7919; in th&#432;&#7901;ng nh&eacute;"))
+            incorrect_msg = paste("B&#7841;n c&oacute; g&aacute;n gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c c&#7911;a factor cho `factor_survey_vector` ch&#432;a? S&#7917; d&#7909;ng h&agrave;m `levels(factor_survey_vector) <- c(\"Female\", \"Male\")`. Nh&#7899; r&#7857;ng R c&oacute; ph&acirc;n bi&#7879;t ch&#7919; in hoa v&agrave; ch&#7919; in th&#432;&#7901;ng nh&eacute;"))
 success_msg("Tuy&#7879;t v&#7901;i! Ti&#7871;p t&#7909;c l&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
@@ -292,13 +292,13 @@ summary(factor_survey_vector)
 
 *** =sct
 ```{r}
-msg = "&#272;&#7915;ng thay &#273;&#7893;i gi&aacute; tr&#7883; `survey_vector` and `factor_survey_vector`."
+msg = "&#272;&#7915;ng thay &#273;&#7893;i gi&aacute; tr&#7883; `survey_vector` v&agrave; `factor_survey_vector`."
 test_object("survey_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_survey_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-msg <- "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `summary()` h&agrave;m ch&iacute;nh x&aacute;c ch&#432;a"
+msg <- "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `summary()` ch&iacute;nh x&aacute;c ch&#432;a?"
 test_output_contains("summary(survey_vector)", incorrect_msg = sprintf(msg, "survey_vector"))
 test_output_contains("summary(factor_survey_vector)", incorrect_msg = sprintf(msg, "factor_survey_vector"))
-success_msg("R&#7845;t t&#7889;t! H&atilde;y xem k&#7871;t qu&#7843; cu&#7889;i c&ugrave;ng. Khi b&#7841;n g&aacute;n gi&aacute; tr&#7883; `"Male"` v&agrave; `"Female"` th&agrave;nh gi&aacute; tr&#7883; c&#7911;a factor trong `factor_survey_vector`, b&#7841;n cho ph&eacute;p R t&iacute;nh to&aacute;n v&agrave; hi&#7875;n th&#7883; s&#7889; l&#432;&#7907;ng c&aacute;c gi&aacute; tr&#7883; trong m&#7895;i bi&#7871;n.")
+success_msg("R&#7845;t t&#7889;t! H&atilde;y xem k&#7871;t qu&#7843; cu&#7889;i c&ugrave;ng. Khi b&#7841;n g&aacute;n gi&aacute; tr&#7883; `\"Male\"` v&agrave; `\"Female\"` th&agrave;nh gi&aacute; tr&#7883; c&#7911;a factor trong `factor_survey_vector`, b&#7841;n &#273;&atilde; cho ph&eacute;p R t&iacute;nh to&aacute;n v&agrave; hi&#7875;n th&#7883; s&#7889; l&#432;&#7907;ng c&aacute;c gi&aacute; tr&#7883; trong m&#7895;i bi&#7871;n.")
 ```
 
 
@@ -469,12 +469,12 @@ summary(factor_speed_vector)
 msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c gi&aacute; tr&#7883; &#7843;nh h&#432;&#7903;ng &#273;&#7871;n bi&#7871;n `speed_vector`."
 test_object("speed_vector", undefined_msg = msg, incorrect_msg = msg)
 test_function("factor", args = c("x", "ordered", "levels"),
-              incorrect_msg = c("Tham s&#7889; &#273;&#7847;u ti&ecirc;n c&#7847;n x&aacute;c &#273;&#7883;nh cho  `factor()` l&agrave; `speed_vector`.",
+              incorrect_msg = c("Tham s&#7889; &#273;&#7847;u ti&ecirc;n c&#7847;n x&aacute;c &#273;&#7883;nh cho `factor()` l&agrave; `speed_vector`.",
                                 "B&#7841;n c&#7847;n ch&#7855;c ch&#7855;n r&#7857;ng &#273;&atilde; &#273;&#7863;t `ordered = TRUE` b&ecirc;n trong h&agrave;m `factor()`.",
-                                "B&#7841;n c&#7847;n ch&#7855;c ch&#7855;n r&#7857;ng &#273;&atilde; &#273;&#7863;t `levels = c("slow", "fast", "insane")` b&ecirc;n trong h&agrave;m `factor()`."))
+                                "B&#7841;n c&#7847;n ch&#7855;c ch&#7855;n r&#7857;ng &#273;&atilde; &#273;&#7863;t `levels = c(\"slow\", \"fast\", \"insane\")` b&ecirc;n trong h&agrave;m `factor()`."))
 test_object("factor_speed_vector", eq_condition = "equal",
-            incorrect_msg = "C&oacute; &#273;i&#7875;m g&igrave; &#273;&oacute; ch&#432;a ch&iacute;nh x&aacute;c v&#7899;i v&eacute;c-t&#417; `factor_speed_vector`; ki&#7875;m tra l&#7841;i `speed_vector`, `ordered = TRUE` and `levels = c("slow", "fast", "insane")` trong gi&aacute; tr&#7883; c&#7911;a h&agrave;m `factor()`.")
-success_msg("R&#7845;t t&#7889;t! H&atilde;y xem m&agrave;n h&igrave;nh t&#432;&#417;ng t&aacute;c console. B&acirc;y gi&#7901; &#273;&atilde; hi&#7875;n th&#7883; th&#7913; t&#7921; c&#7911;a v&eacute;c-t&#417; v&#7899;i d&#7845;u `&lt;`. Ti&#7871;p t&#7909;c l&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;")
+            incorrect_msg = "C&oacute; &#273;i&#7875;m g&igrave; &#273;&oacute; ch&#432;a ch&iacute;nh x&aacute;c v&#7899;i v&eacute;c-t&#417; `factor_speed_vector`; ki&#7875;m tra l&#7841;i `speed_vector`, `ordered = TRUE` v&agrave; `levels = c(\"slow\", \"fast\", \"insane\")` trong gi&aacute; tr&#7883; c&#7911;a h&agrave;m `factor()`.")
+success_msg("R&#7845;t t&#7889;t! H&atilde;y xem m&agrave;n h&igrave;nh t&#432;&#417;ng t&aacute;c console. B&acirc;y gi&#7901; &#273;&atilde; hi&#7875;n th&#7883; th&#7913; t&#7921; c&#7911;a v&eacute;c-t&#417; v&#7899;i d&#7845;u `<`. Ti&#7871;p t&#7909;c l&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
 
