@@ -287,7 +287,7 @@ test_output_contains("my_apples + my_oranges",
                      incorrect_msg = "H&atilde;y nh&#7899; hi&#7875;n th&#7883; ra k&#7871;t qu&#7843; c&#7911;a ph&eacute;p t&iacute;nh c&#7897;ng gi&#7919;a `my_apples` v&agrave; `my_oranges`. C&acirc;u l&#7879;nh m&#7851;u trong ph&#7847;n m&ocirc; t&#7843; th&#7921;c ra &#273;&atilde; l&agrave;m l&#7897; k&#7871;t qu&#7843; c&#7911;a ph&eacute;p t&iacute;nh n&agrave;y!")
 msg <- "B&#7841;n &#273;&atilde; d&ugrave;ng l&#7879;nh `my_fruit &lt;- my_apples + my_oranges` &#273;&#7875; t&#7841;o bi&#7871;n `my_fruit` ch&#432;a?"
 test_object("my_fruit", undefined_msg = msg, incorrect_msg = msg)
-success_msg("T&#7889;t l&#7855;m! L&#7907;i th&#7871; r&#7845;t l&#7899;n c&#7911;a vi&#7879;c s&#7917; d&#7909;ng c&aacute;c bi&#7871;n &#273;&#7875; t&iacute;nh to&aacute;n n&#7857;m &#7903; kh&#7843; n&#259;ng t&aacute;i s&#7917; d&#7909;ng. N&#7871;u b&#7841;n g&aacute;n l&#7841;i bi&#7871;n `my_apples` &#273;&#7875; n&oacute; b&#7857;ng 12 ch&#7913; kh&ocirc;ng b&#7857;ng 5 n&#7919;a v&agrave; ch&#7841;y l&#7841;i t&#7879;p l&#7879;nh, `my_fruit` c&#361;ng s&#7869; &#273;&#432;&#7907;c c&#7853;p nh&#7853;t ngay l&#7853;p t&#7913;c. Sang b&agrave;i ti&#7871;p theo nh&eacute;.")
+success_msg("T&#7889;t l&#7855;m! L&#7907;i th&#7871; r&#7845;t l&#7899;n c&#7911;a vi&#7879;c s&#7917; d&#7909;ng c&aacute;c bi&#7871;n &#273;&#7875; t&iacute;nh to&aacute;n n&#7857;m &#7903; kh&#7843; n&#259;ng t&aacute;i s&#7917; d&#7909;ng. N&#7871;u b&#7841;n g&aacute;n l&#7841;i bi&#7871;n `my_apples` &#273;&#7875; n&oacute; b&#7857;ng 12 ch&#7913; kh&ocirc;ng b&#7857;ng 5 n&#7919;a v&agrave; ch&#7841;y l&#7841;i c&acirc;u l&#7879;nh, `my_fruit` c&#361;ng s&#7869; &#273;&#432;&#7907;c c&#7853;p nh&#7853;t ngay l&#7853;p t&#7913;c. Sang b&agrave;i ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -402,7 +402,7 @@ my_logical <- FALSE
 *** =sct
 ```{r}
 test_object("my_numeric", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917;a l&#7841;i gi&aacute; tr&#7883; c&#7911;a `my_numeric` &#273;&#7875; n&oacute; ch&#7913;a 42?")
-test_object("my_character", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917;a l&#7841;i ch&iacute;nh x&aacute;c gi&aacute; tr&#7883; c&#7911;a `my_character` th&agrave;nh `\&quot;universe\&quot;` ch&#432;a? &#272;&#7915;ng qu&ecirc;n th&ecirc;m d&#7845;u ngo&#7863;c k&eacute;p nh&eacute;!")
+test_object("my_character", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917;a l&#7841;i ch&iacute;nh x&aacute;c gi&aacute; tr&#7883; c&#7911;a `my_character` th&agrave;nh `\"universe\"` ch&#432;a? &#272;&#7915;ng qu&ecirc;n th&ecirc;m d&#7845;u ngo&#7863;c k&eacute;p nh&eacute;!")
 test_object("my_logical", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917;a l&#7841;i ch&iacute;nh x&aacute;c gi&aacute; tr&#7883; c&#7911;a `my_logical` th&agrave;nh `FALSE` ch&#432;a? Nh&#7899; vi&#7871;t hoa t&#7845;t c&#7843; c&aacute;c ch&#7919; trong `FALSE`nh&eacute;!")
 success_msg("Gi&#7887;i l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo th&ocirc;i.")
 ```
@@ -462,7 +462,7 @@ class(my_logical)
 ```{r}
 msg <- "&#272;&#7915;ng  s&#7917;a l&#7841;i gi&aacute; tr&#7883; c&#7911;a c&aacute;c bi&#7871;n!"
 lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
-patt <- "B&#7841;n &#273;&atilde; th&ecirc;m c&acirc;u l&#7879;nh`class(%1$s)` &#273;&#7875; hi&#7875;n th&#7883; lo&#7841;i d&#7919; li&#7879;u c&#7911;a `%1$s` ch&#432;a?"
+patt <- "B&#7841;n &#273;&atilde; th&ecirc;m c&acirc;u l&#7879;nh `class(%1$s)` &#273;&#7875; hi&#7875;n th&#7883; lo&#7841;i d&#7919; li&#7879;u c&#7911;a `%1$s` ch&#432;a?"
 test_output_contains("class(my_numeric)",
                      incorrect_msg = "&#272;&#7915;ng x&oacute;a c&acirc;u l&#7879;nh hi&#7875;n th&#7883; lo&#7841;i d&#7919; li&#7879;u c&#7911;a `my_numeric`.")
 test_output_contains("class(my_character)",
