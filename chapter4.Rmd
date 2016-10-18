@@ -250,7 +250,7 @@ summary(my_var)
 Quay lại với ví dụ về bảng hỏi ở phần trước, bạn có lẽ sẽ muốn kiểm tra xem có bao nhiêu giá trị `"Male"` và `"Female"`. Hàm [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) sẽ trả lời cho câu hỏi trên của bạn. 
 
 *** =instructions
-Sử dụng hàm [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) đối với `survey_vector` và `factor_survey_vector`. Interpret the results of both vectors. Are they both equally useful in this case? Giả thích kết quả của cả 2 véc-tơ. Liệu rằngi kết quả đều có giá trị như nhau trong trường hợp trên? 
+Sử dụng hàm [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) đối với `survey_vector` và `factor_survey_vector`. Giải thích kết quả của cả 2 véc-tơ. Liệu rằng kết quả đều có giá trị như nhau trong cả hai trường hợp trên? 
 
 *** =hint
 Gọi hàm [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) đối với  `survey_vector` và `factor_survey_vector`, đơn giản vậy thôi!
@@ -309,7 +309,7 @@ Trong  `factor_survey_vector`, chúng ta có một factor với hai giá trị: 
 
 *** =instructions
 
-Đọc các câu lệnh trong editor và clcik 'Submit Answer' để xem giá trị nào, Male hay Female có giá trị hơn.
+Đọc các câu lệnh trong editor và click 'Submit Answer' để xem giá trị nào, Male hay Female có giá trị hơn.
 
 *** =hint
 Ấn vào nút 'Submit Answer' để xem kết quả được hiển thị trên màn hình tương tác.
@@ -332,7 +332,7 @@ male <- factor_survey_vector[1]
 # Female
 female <- factor_survey_vector[2]
 
-# Đánh giá các giá trị của giới tính: Male hay  female  'có giá trị hơn'?
+# Đánh giá các giá trị của giới tính: Male hay  Female  'có giá trị hơn'?
 male > female
 ```
 
@@ -349,7 +349,7 @@ male <- factor_survey_vector[1]
 # Female
 female <- factor_survey_vector[2]
 
-# Đánh giá các giá trị của giới tính: Male hay  female  'có giá trị hơn'?
+# Đánh giá các giá trị của giới tính: Male hay  Female  'có giá trị hơn'?
 male > female
 ```
 
