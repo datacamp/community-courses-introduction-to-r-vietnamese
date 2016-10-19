@@ -139,7 +139,7 @@ success_msg("R&#7845;t t&#7889;t! B&#7841;n c&oacute; th&#7845;y t&#7845;t c&#78
 
 Chỉ sử dụng tập dữ liệu có sẵn trong R là chưa đủ, phần tiếp theo của chương này sẽ hướng dẫn các bạn cách thức tự tạo tập dữ liệu. 
 
-Ví dụ, bạn muốn tạo một data frame mô tả các thuộc tính của 8 hành tinh rong hệ mặt trời. Theo gợi ý từ bạn của bạn, các đặc tính cơ bản gồm có:
+Ví dụ, bạn muốn tạo một data frame mô tả các thuộc tính của 8 hành tinh trong hệ mặt trời. Theo gợi ý từ bạn của bạn, các đặc tính cơ bản gồm có:
 
 - Loại hành tinh (Terrestrial hay Gas Giant).
 - Bán kính (so với trái đất)
@@ -481,7 +481,7 @@ subset(my_df, subset = some_condition)
 
 Tham số đầu tiên của  [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) xác định tập dữ liệu bạn muốn sử dụng. Bằng cách thêm tham số thứ hai, bạn cung cấp cho R các thông tin và điều kiện cần thiết để lọc dữ liệu.
 
-Các câu lệnh dưới đây sẽ cho bạn kết quả chinh xác như bài tập ở phần trước. Tuy nhiên ở phần này, bạn không cần phải sử dụng véc-tơ `rings_vector`!
+Các câu lệnh dưới đây sẽ cho bạn kết quả chính xác như bài tập ở phần trước. Tuy nhiên ở phần này, bạn không cần phải sử dụng véc-tơ `rings_vector`!
 
 
 ```

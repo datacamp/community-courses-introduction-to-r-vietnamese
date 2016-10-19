@@ -382,7 +382,7 @@ Giả sử rằng bạn đang hướng dẫn một nhóm nhiên cứu gồm có 
 - Chuyên viên hai làm chậm (slow)
 - Chuyên viên ba làm chậm (slow)
 - Chuyên viên bốn làm nhanh (fast)
-- Chuyên viên 5 làm rất tệ (insane)
+- Chuyên viên 5 làm nhanh khủng khiếp (insane)
 
 Ta chưa cần xác định các factor này ngay
 
@@ -488,7 +488,7 @@ Véc-tơ `factor_speed_vector` , giờ đã được sắp xếp thứ tự, cho
 
 *** =instructions
 - Sử dụng `[2]` để lựa chọn factor từ véc-tơ `factor_speed_vector`, giá trị này được gán cho chuyên viên hai. Lưu giá trị này thành  `da2`.
-- Sử dụng `[5]` để lựa chọn factor từ véc-tơ `factor_speed_vector`, giá trị này được gán cho chuyên viên hai. Lưu giá trị này thành  `d52`.
+- Sử dụng `[5]` để lựa chọn factor từ véc-tơ `factor_speed_vector`, giá trị này được gán cho chuyên viên hai. Lưu giá trị này thành  `da5`.
 - Kiểm tra xem `da2` có lớn hơn giá trị `da5` hay không; hiển thị kết quả ra ngoài màn hình. Nhớ rằng bạn có thể sử dụng dấu lớn hơn  `>` trong trường hợp này
 
 *** =hint
