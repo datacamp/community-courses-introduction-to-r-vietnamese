@@ -355,7 +355,7 @@ R có thể xử lý nhiều loại dữ liệu khác nhau. Chúng ta sẽ bắt
 - Các giá trị lôgic  (`TRUE` hoặc `FALSE`) được gọi là **giá trị lôgic** (logical)
 - Các giá trị chữ hoặc chuỗi chữ được gọi là **ký tự** (characters)
 
-Chú ý: Dấu ngoặc kép bên phải thể hiện "some text" là một ký tự.
+Chú ý: Kiểu dữ liệu nằm trong dấu ngoặc kép là kiểu ký tự (characters)
 
 *** =instructions
 Thay đổi giá trị của các biến sau đây:

@@ -330,7 +330,7 @@ c <- a + b
 
 *** =instructions
 - Tính tổng của các biến `A_vector` và `B_vector` sau đó gán kết quả cho `total_vector`.
-- Kiểm tra lại kết quả bằng cách in `total_vector` ra.
+- Kiểm tra lại kết quả bằng cách hiển thị kết quả `total_vector`.
 
 *** =hint
 Sử dụng dấu `+` để tính tổng của `A_vector` và `B_vector`. Dùng `<-` để gán kết quả cho `total_vector`.
@@ -446,7 +446,7 @@ total_poker <- sum(poker_vector)
 *** =instructions
 - Tính tổng số tiền bạn đã thắng hoặc thua khi chơi rulet và gán kết quả này cho `total_roulette`.
 - Giờ thì bạn đã có số tổng cho cả rulet lẫn poker, bạn có thể dễ dàng tính `total_week` (là tổng lỗ lãi từ việc thắng thua của cả tuần).
-- In `total_week`.
+- Hiển thị `total_week`.
 
 *** =hint
 Sử dụng hàm [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) để tính tổng cho `roulette_vector`. `total_week` là tổng của `roulette_vector` và `poker_vector`.
@@ -527,7 +527,7 @@ Sau một hồi suy nghĩ trong bể sục của khách sạn, bạn nhận ra m
 
 *** =instructions
 - Tính `total_poker` và `total_roulette` giống bài tập trước. Sử dụng hàm `sum()` hai lần.
-- Dùng phép so sánh để kiểm tra xem có đúng bạn kiếm đc nhiều tiền khi chơi poker hơn là khi chơi rulet không?. Sau đó in ra kết quả của phép so sánh này. Bạn rút ra được kết luận gì? Bạn nên tập trung chơi rulet hay là poker? 
+- Dùng phép so sánh để kiểm tra xem có đúng bạn kiếm đc nhiều tiền khi chơi poker hơn là khi chơi rulet không?. Sau đó hiển thị ra kết quả của phép so sánh này. Bạn rút ra được kết luận gì? Bạn nên tập trung chơi rulet hay là poker? 
 
 *** =hint
 - Bạn đã tính đc một phần của câu hỏi này trong bài tập trước rồi đấy!
