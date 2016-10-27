@@ -1,7 +1,7 @@
 --- 
 title_meta  : Chương 2
 title       : Véc-tơ
-description : "Trong chương tiếp theo trong khóa học này, chúng ta sẽ cùng đến thăm Vegas, tại đây bạn sẽ được học cách sử dụng vec-tơ trong R để phân tích kết quả bài bạc của bản thân! Sau khi hoàn thành chương này, bạn sẽ học được cách tạo, đặt tên, lọc các yếu tố và so sánh các véc-tơ trong R."
+description : "Trong chương tiếp theo trong khóa học này, chúng ta sẽ cùng đến thăm Vegas, tại đây bạn sẽ được học cách sử dụng vec-tơ trong R để phân tích kết quả bài bạc của bản thân! Sau khi hoàn thành chương này, bạn sẽ học được cách khởi tạo, đặt tên, lọc các yếu tố và so sánh các véc-tơ trong R."
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Tạo một véc-tơ
@@ -39,8 +39,8 @@ vegas <- "Go!"
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Đừng quên gán đúng giá trị cho biến `vegas`. Đừng quên là R phân biệt chữ hoa và chữ thường nhé! ")
-success_msg("Tuyệt lắm! Sang bài tập tiếp theo nào.")
+test_object("vegas", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n g&aacute;n &#273;&uacute;ng gi&aacute; tr&#7883; cho bi&#7871;n `vegas`. &#272;&#7915;ng qu&ecirc;n l&agrave; R ph&acirc;n bi&#7879;t ch&#7919; hoa v&agrave; ch&#7919; th&#432;&#7901;ng nh&eacute;!")
+success_msg("Tuy&#7879;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -89,12 +89,12 @@ boolean_vector <- c(TRUE, FALSE, TRUE)
 
 *** =sct
 ```{r}
-msg <- "Đừng sửa câu lệnh được dùng để định nghĩa `numeric_vector` và `character_vector`!"
+msg <- "&#272;&#7915;ng s&#7917;a c&acirc;u l&#7879;nh &#273;&#432;&#7907;c d&ugrave;ng &#273;&#7875; &#273;&#7883;nh ngh&#297;a `numeric_vector` v&agrave; `character_vector`!"
 test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vector",
-            incorrect_msg = "Hãy gán các giá trị đúng cho `boolean_vector`. Dùng `c(TRUE, FALSE, TRUE)`. Đừng dùng dấu ngoặc kép cho `TRUE` và `FALSE`! Ngoài ra, hãy nhớ sử dụng đúng thứ tự như trong phần hướng dẫn.")
-success_msg("Hoàn hảo! Bạn có thấy là khi ta đặt một khoảng cách giữa những dấu phẩy trong hàm `c()` thì câu lệnh sẽ dễ nhìn hơn không. Chúng ta sẽ luyện tập tiếp về việc tạo véc-tơ trong bài tập tiếp theo.")
+            incorrect_msg = "H&atilde;y g&aacute;n c&aacute;c gi&aacute; tr&#7883; &#273;&uacute;ng cho `boolean_vector`. D&ugrave;ng `c(TRUE, FALSE, TRUE)`. &#272;&#7915;ng d&ugrave;ng d&#7845;u ngo&#7863;c k&eacute;p cho `TRUE` v&agrave; `FALSE`! Ngo&agrave;i ra, h&atilde;y nh&#7899; s&#7917; d&#7909;ng &#273;&uacute;ng th&#7913; t&#7921; nh&#432; trong ph&#7847;n h&#432;&#7899;ng d&#7851;n.")
+success_msg("Ho&agrave;n h&#7843;o! B&#7841;n c&oacute; th&#7845;y l&agrave; khi ta &#273;&#7863;t m&#7897;t kho&#7843;ng c&aacute;ch gi&#7919;a nh&#7919;ng d&#7845;u ph&#7849;y trong h&agrave;m `c()` th&igrave; c&acirc;u l&#7879;nh s&#7869; d&#7877; nh&igrave;n h&#417;n kh&ocirc;ng. Ch&uacute;ng ta s&#7869; luy&#7879;n t&#7853;p ti&#7871;p v&#7873; vi&#7879;c t&#7841;o v&eacute;c-t&#417; trong b&agrave;i t&#7853;p ti&#7871;p theo.")
 ```
 
 
@@ -150,10 +150,10 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Hãy nhớ đặt đúng các giá trị cho `poker_vector`.")
+            incorrect_msg = "H&atilde;y nh&#7899; &#273;&#7863;t &#273;&uacute;ng c&aacute;c gi&aacute; tr&#7883; cho `poker_vector`.")
 test_object("roulette_vector",
-            incorrect_msg = "Hãy nhớ đặt đúng các giá trị cho `roulette_vector`.Kiểm tra xem thứ tự đã đúng chưa!")
-success_msg("Tốt lắm! Để xem lại các véc-tơ của bạn chứa những gì, bạn chỉ cần gõ tên biến trong bảng điều khiển và nhấn Enter. Sang bài tập tiếp theo nào!")
+            incorrect_msg = "H&atilde;y nh&#7899; &#273;&#7863;t &#273;&uacute;ng c&aacute;c gi&aacute; tr&#7883; cho `roulette_vector`.Ki&#7875;m tra xem th&#7913; t&#7921; &#273;&atilde; &#273;&uacute;ng ch&#432;a!")
+success_msg("T&#7889;t l&#7855;m! &#272;&#7875; xem l&#7841;i c&aacute;c v&eacute;c-t&#417; c&#7911;a b&#7841;n ch&#7913;a nh&#7919;ng g&igrave;, b&#7841;n ch&#7881; c&#7847;n g&otilde; t&ecirc;n bi&#7871;n trong b&#7843;ng &#273;i&#7873;u khi&#7875;n v&agrave; nh&#7845;n Enter. Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o!")
 ```
 
 
@@ -216,16 +216,16 @@ names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Đừng thay đổi giá trị bên trong `poker_vector`; đây là một câu lệnh mẫu.")
+            incorrect_msg = "&#272;&#7915;ng thay &#273;&#7893;i gi&aacute; tr&#7883; b&ecirc;n trong `poker_vector`; &#273;&acirc;y l&agrave; m&#7897;t c&acirc;u l&#7879;nh m&#7851;u.")
 test_object("roulette_vector",
-            incorrect_msg = "Đừng thay đổi giá trị bên trong `roulette_vector`; đây là một câu lệnh mẫu.")
+            incorrect_msg = "&#272;&#7915;ng thay &#273;&#7893;i gi&aacute; tr&#7883; b&ecirc;n trong `roulette_vector`; &#273;&acirc;y l&agrave; m&#7897;t c&acirc;u l&#7879;nh m&#7851;u.")
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Đừng thay đổi câu lệnh dùng để đặt tên các yếu tố trong `poker_vector`; hãy tập trung vào `roulette_vector`!")
+            incorrect_msg = "&#272;&#7915;ng thay &#273;&#7893;i c&acirc;u l&#7879;nh d&ugrave;ng &#273;&#7875; &#273;&#7863;t t&ecirc;n c&aacute;c y&#7871;u t&#7889; trong `poker_vector`; h&atilde;y t&#7853;p trung v&agrave;o `roulette_vector`!")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Hãy nhớ dùng véc-tơ tên chính xác để đặt tên cho `roulette_vector`. Sử dụng chính véc-tơ đã được dùng để đặt tên cho `poker_vector`.")
-success_msg("Giỏi lắm! Sang bài tập tiếp theo nào.")
+            incorrect_msg = "H&atilde;y nh&#7899; d&ugrave;ng v&eacute;c-t&#417; t&ecirc;n ch&iacute;nh x&aacute;c &#273;&#7875; &#273;&#7863;t t&ecirc;n cho `roulette_vector`. S&#7917; d&#7909;ng ch&iacute;nh v&eacute;c-t&#417; &#273;&atilde; &#273;&#432;&#7907;c d&ugrave;ng &#273;&#7875; &#273;&#7863;t t&ecirc;n cho `poker_vector`.")
+success_msg("Gi&#7887;i l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -243,7 +243,7 @@ Giống hệt như những gì bạn đã làm với dữ liệu thắng thua c�
 - Sử dụng `days_vector` để đặt tên cho `poker_vector` và `roulette_vector`.
 
 *** =hint
-Bạn có thể dùng `names(poker_vector) <- days_vector` để đặt tên cho các yếu tố trong `poker_vector`. Làm điều tương tự với `roulette_vector`.
+Bạn có thể dùng `names(poker_vector) <- days_vector` để đặt tên cho các yếu tố trong `poker_vector`. Làm tương tự với `roulette_vector`.
 
 *** =pre_exercise_code
 ```{r}
@@ -284,18 +284,18 @@ names(roulette_vector) <- days_vector
 
 *** =sct
 ```{r}
-msg <- "Đừng thay đổi nội dung của các biến `poker_vector`, `roulette_vector` hay là `days_vector`."
+msg <- "&#272;&#7915;ng thay &#273;&#7893;i n&#7897;i dung c&#7911;a c&aacute;c bi&#7871;n `poker_vector`, `roulette_vector` hay l&agrave; `days_vector`."
 test_object("poker_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Hãy nhớ gán `days_vector` làm tên của các yếu tố trong `poker_vector`.")
+            incorrect_msg = "H&atilde;y nh&#7899; g&aacute;n `days_vector` l&agrave;m t&ecirc;n c&#7911;a c&aacute;c y&#7871;u t&#7889; trong `poker_vector`.")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Hãy nhớ gán `days_vector` làm tên của các yếu tố trong `roulette_vector`.")
-success_msg("Hay lắm! Một lời góp ý cho bạn, đó là phải nhất định tránh việc sao dư câu lệnh. Hãy sang bài tập tiếp theo để học các làm toán với véc-tơ nhé!")
+            incorrect_msg = "H&atilde;y nh&#7899; g&aacute;n `days_vector` l&agrave;m t&ecirc;n c&#7911;a c&aacute;c y&#7871;u t&#7889; trong `roulette_vector`.")
+success_msg("Hay l&#7855;m! Data Camp c&oacute; m&#7897;t l&#7901;i khuy&ecirc;n nho nh&#7887; d&agrave;nh cho b&#7841;n, &#273;&oacute; l&agrave; nh&#7845;t &#273;&#7883;nh ph&#7843;i tr&aacute;nh vi&#7879;c l&#7863;p l&#7841;i c&aacute;c c&acirc;u l&#7879;nh. H&atilde;y sang b&agrave;i t&#7853;p ti&#7871;p theo &#273;&#7875; h&#7885;c c&aacute;c th&#7921;c hi&#7879;n c&aacute;c ph&eacute;p t&iacute;nh v&#7899;i v&eacute;c-t&#417; nh&eacute;!")
 ```
 
 
@@ -330,7 +330,7 @@ c <- a + b
 
 *** =instructions
 - Tính tổng của các biến `A_vector` và `B_vector` sau đó gán kết quả cho `total_vector`.
-- Kiểm tra lại kết quả bằng cách in `total_vector` ra.
+- Kiểm tra lại kết quả bằng cách hiển thị kết quả `total_vector`.
 
 *** =hint
 Sử dụng dấu `+` để tính tổng của `A_vector` và `B_vector`. Dùng `<-` để gán kết quả cho `total_vector`.
@@ -366,12 +366,12 @@ total_vector
 
 *** =sct
 ```{r}
-msg <- "Đừng sửa nội dung của `A_vector` hoặc `B_vector`!"
+msg <- "&#272;&#7915;ng s&#7917;a n&#7897;i dung c&#7911;a `A_vector` ho&#7863;c `B_vector`!"
 test_object("A_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("B_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("total_vector", incorrect_msg = "Hãy nhớ là `total_vector` phải chứa tổng của `A_vector` và `B_vector`.")
-test_output_contains("total_vector", incorrect_msg = "Đừng quên in `total_vector` ra! Bạn chỉ cần gõ `total_vector` trên một dòng mới.")
-success_msg("Tốt lắm! Hãy sang bài tập tiếp theo.")
+test_object("total_vector", incorrect_msg = "H&atilde;y nh&#7899; l&agrave; `total_vector` ph&#7843;i ch&#7913;a t&#7893;ng c&#7911;a `A_vector` v&agrave; `B_vector`.")
+test_output_contains("total_vector", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; `total_vector`! B&#7841;n ch&#7881; c&#7847;n g&otilde; `total_vector` tr&ecirc;n m&#7897;t d&ograve;ng m&#7899;i.")
+success_msg("T&#7889;t l&#7855;m! H&atilde;y sang b&agrave;i t&#7853;p ti&#7871;p theo.")
 ```
 
 
@@ -421,14 +421,14 @@ total_daily <- poker_vector + roulette_vector
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_daily", incorrect_msg = "Nhớ gán tổng của `poker_vector` và `roulette_vector` cho `total_daily`.")
+test_object("total_daily", incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a `poker_vector` v&agrave; `roulette_vector` cho `total_daily`.")
 
-success_msg("Tuyệt! Sang bài tập tiếp theo nào.")
+success_msg("Tuy&#7879;t! Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -446,7 +446,7 @@ total_poker <- sum(poker_vector)
 *** =instructions
 - Tính tổng số tiền bạn đã thắng hoặc thua khi chơi rulet và gán kết quả này cho `total_roulette`.
 - Giờ thì bạn đã có số tổng cho cả rulet lẫn poker, bạn có thể dễ dàng tính `total_week` (là tổng lỗ lãi từ việc thắng thua của cả tuần).
-- In `total_week`.
+- Hiển thị `total_week`.
 
 *** =hint
 Sử dụng hàm [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) để tính tổng cho `roulette_vector`. `total_week` là tổng của `roulette_vector` và `poker_vector`.
@@ -471,10 +471,10 @@ total_poker <- sum(poker_vector)
 # Tổng lời lãi từ việc chơi rulet
 total_roulette <-  
 
-# Tổng lời lại chung
+# Tổng lời lãi chung
 total_week <- 
 
-# In kết quả total_week
+# Hiển thị kết quả total_week
   
 ```
 
@@ -496,25 +496,25 @@ total_roulette <-  sum(roulette_vector)
 # Tổng lời lại chung
 total_week <- total_roulette + total_poker
 
-# In kết quả total_week
+# Hiển thị kết quả total_week
 total_week
 ```
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("total_poker", 
-            incorrect_msg = "Nhớ gán tổng của  `poker_vector` cho biến `total_poker`.")
+            incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a  `poker_vector` cho bi&#7871;n `total_poker`.")
 test_object("total_roulette",
-            incorrect_msg = "Nhớ gán tổng của  `roulette_vector` cho biến `total_roulette`.")
+            incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a  `roulette_vector` cho bi&#7871;n `total_roulette`.")
 test_object("total_week",
-            incorrect_msg = "Nhớ gán tổng của 2 véc-tơ `total_roulette` và `total_poker` cho biến `total_week`.")
+            incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a 2 v&eacute;c-t&#417; `total_roulette` v&agrave; `total_poker` cho bi&#7871;n `total_week`.")
 
-test_output_contains("total_week", incorrect_msg = "Đừng quên gõ `total_week` trên một dòng mới để in giá trị của biến đó ra.")
-success_msg("Làm tốt lắm. Nhưng kết quả thì không được như mong đợi...")
+test_output_contains("total_week", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n g&otilde; `total_week` tr&ecirc;n m&#7897;t d&ograve;ng m&#7899;i &#273;&#7875; in gi&aacute; tr&#7883; c&#7911;a bi&#7871;n &#273;&oacute; ra.")
+success_msg("L&agrave;m t&#7889;t l&#7855;m. Nh&#432;ng k&#7871;t qu&#7843; th&igrave; kh&ocirc;ng &#273;&#432;&#7907;c nh&#432; mong &#273;&#7907;i...")
 ```
 
 
@@ -527,7 +527,7 @@ Sau một hồi suy nghĩ trong bể sục của khách sạn, bạn nhận ra m
 
 *** =instructions
 - Tính `total_poker` và `total_roulette` giống bài tập trước. Sử dụng hàm `sum()` hai lần.
-- Dùng phép so sánh để kiểm tra xem có đúng bạn kiếm đc nhiều tiền khi chơi poker hơn là khi chơi rulet không?. Sau đó in ra kết quả của phép so sánh này. Bạn rút ra được kết luận gì? Bạn nên tập trung chơi rulet hay là poker? 
+- Dùng phép so sánh để kiểm tra xem có đúng bạn kiếm đc nhiều tiền khi chơi poker hơn là khi chơi rulet không?. Sau đó hiển thị ra kết quả của phép so sánh này. Bạn rút ra được kết luận gì? Bạn nên tập trung chơi rulet hay là poker? 
 
 *** =hint
 - Bạn đã tính đc một phần của câu hỏi này trong bài tập trước rồi đấy!
@@ -574,18 +574,18 @@ total_poker > total_roulette
 
 *** =sct
 ```{r}
-msg <- "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg <- "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("total_poker", 
-            incorrect_msg = "Nhớ gán tổng của  `poker_vector` cho biến `total_poker`. Dùng hàm `sum()`.")
+            incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a  `poker_vector` cho bi&#7871;n `total_poker`. D&ugrave;ng h&agrave;m `sum()`.")
 test_object("total_roulette",
-            incorrect_msg = "Nhớ gán tổng của  `roulette_vector` cho biến `total_roulette`. Dùng hàm `sum()`.")
+            incorrect_msg = "Nh&#7899; g&aacute;n t&#7893;ng c&#7911;a  `roulette_vector` cho bi&#7871;n `total_roulette`. D&ugrave;ng h&agrave;m `sum()`.")
 test_output_contains("total_poker > total_roulette",
-                     incorrect_msg = "Bạn đã so sánh đúng chưa? Để kiểm tra xem có phải `total_poker` lớn hơn `total_roulette`, Bạn có thể gõ `total_poker > total_roulette`.")
-success_msg("Tốt lắm! Sang bài tập tiếp theo nhé.")
+                     incorrect_msg = "B&#7841;n &#273;&atilde; so s&aacute;nh &#273;&uacute;ng ch&#432;a? &#272;&#7875; ki&#7875;m tra xem c&oacute; ph&#7843;i `total_poker` l&#7899;n h&#417;n `total_roulette`, B&#7841;n c&oacute; th&#7875; g&otilde; `total_poker &gt; total_roulette`.")
+success_msg("T&#7889;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -637,14 +637,14 @@ poker_wednesday <- poker_vector[3]
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_wednesday", 
-            undefined_msg = "Hãy nhớ gán giá trị cho `poker_wednesday`.",
-            incorrect_msg = "Hình như `poker_wednesday` đang không chứa giá trị chính xác của `poker_vector`.")
-success_msg("Tuyệt lắm! Với R chúng ta cũng có thể cùng một lúc chọn nhiều yếu tố trong một véc-tơ. Bạn sẽ được học cách làm điều này trong bài tập tiếp theo!")
+            undefined_msg = "H&atilde;y nh&#7899; g&aacute;n gi&aacute; tr&#7883; cho `poker_wednesday`.",
+            incorrect_msg = "H&igrave;nh nh&#432; `poker_wednesday` &#273;ang kh&ocirc;ng ch&#7913;a gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c c&#7911;a `poker_vector`.")
+success_msg("Tuy&#7879;t l&#7855;m! V&#7899;i R ch&uacute;ng ta c&#361;ng c&oacute; th&#7875; c&ugrave;ng m&#7897;t l&uacute;c ch&#7885;n nhi&#7873;u y&#7871;u t&#7889; trong m&#7897;t v&eacute;c-t&#417;. B&#7841;n s&#7869; &#273;&#432;&#7907;c h&#7885;c c&aacute;ch l&agrave;m &#273;i&#7873;u n&agrave;y trong b&agrave;i t&#7853;p ti&#7871;p theo!")
 ```
 
 
@@ -698,13 +698,13 @@ poker_midweek <- poker_vector[c(2, 3, 4)]
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_midweek", 
-            incorrect_msg = "Hình như `poker_midweek` không chứa giá trị chính xác của `poker_vector`.Bạn nên đặt `c(2, 3, 4)` trong dấu ngoặc vuông.")
-success_msg("Làm tốt lắm! Tiếp tục sang bài tập tiếp theo để tìm hiểu sâu hơn nữa về việc lựa chọn trong véc-tơ!");
+            incorrect_msg = "H&igrave;nh nh&#432; `poker_midweek` kh&ocirc;ng ch&#7913;a gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c c&#7911;a `poker_vector`.B&#7841;n n&ecirc;n &#273;&#7863;t `c(2, 3, 4)` trong d&#7845;u ngo&#7863;c vu&ocirc;ng.")
+success_msg("L&agrave;m t&#7889;t l&#7855;m! Ti&#7871;p t&#7909;c sang b&agrave;i t&#7853;p ti&#7871;p theo &#273;&#7875; t&igrave;m hi&#7875;u s&acirc;u h&#417;n n&#7919;a v&#7873; vi&#7879;c l&#7921;a ch&#7885;n trong v&eacute;c-t&#417;!")
 ```
 
 
@@ -750,14 +750,14 @@ roulette_selection_vector <- roulette_vector[2:5]
 *** =sct
 
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_selection_vector", 
-            undefined_msg = "Nhớ phải gán giá trị cho biến `roulette_selection_vector`.",
-            incorrect_msg = "Hình như `roulette_selection_vector` không chứa lựa chọn đúng từ `roulette_vector`. Nhớ dùng đúng số để chọn đúng.")
-success_msg("Tuyệt lắm! Dấu hai chấm cực kì hữu dụng và rất thường được sử dụng trong lập trình R, nên bạn hãy nhớ nó nhé. Sang bài tập tiếp theo nào.")
+            undefined_msg = "Nh&#7899; ph&#7843;i g&aacute;n gi&aacute; tr&#7883; cho bi&#7871;n `roulette_selection_vector`.",
+            incorrect_msg = "H&igrave;nh nh&#432; `roulette_selection_vector` kh&ocirc;ng ch&#7913;a l&#7921;a ch&#7885;n &#273;&uacute;ng t&#7915; `roulette_vector`. Nh&#7899; d&ugrave;ng &#273;&uacute;ng s&#7889; &#273;&#7875; ch&#7885;n &#273;&uacute;ng.")
+success_msg("Tuy&#7879;t l&#7855;m! D&#7845;u hai ch&#7845;m c&#7921;c k&igrave; h&#7919;u d&#7909;ng v&agrave; r&#7845;t th&#432;&#7901;ng &#273;&#432;&#7907;c s&#7917; d&#7909;ng trong l&#7853;p tr&igrave;nh R, n&ecirc;n b&#7841;n h&atilde;y nh&#7899; n&oacute; nh&eacute;. Sang b&agrave;i t&#7853;p ti&#7871;p theo n&agrave;o.")
 ```
 
 
@@ -825,14 +825,14 @@ mean(poker_start)
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_start", 
-            incorrect_msg = "Có vẻ như `poker_start` không chứa ba giá trị đầu tiên của `poker_vector`.Để làm điều này bạn cho `c(\"Monday\", \"Tuesday\", \"Wednesday\")` vào trong dấu ngoặc vuông.")
-test_output_contains("mean(poker_start)", incorrect_msg = "Bạn đã tính và in ra đúng giá trị trung bình của các giá trị trong `poker_start` chưa? Dùng hàm `mean(poker_start)`.")
-success_msg("Giỏi lắm! Ngoài việc chia nhỏ véc-tơ theo thứ bậc hoặc theo tên, bạn cũng có thể làm thế nhờ việc so sánh. Bài tập tiếp theo sẽ dạy bạn cách làm này!");
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `poker_start` kh&ocirc;ng ch&#7913;a ba gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a `poker_vector`. &#272;&#7875; l&agrave;m &#273;i&#7873;u n&agrave;y b&#7841;n cho c&aacute;c gi&aacute; tr&#7883; `c(\"Monday\", \"Tuesday\", \"Wednesday\")` v&agrave;o trong d&#7845;u ngo&#7863;c vu&ocirc;ng.")
+test_output_contains("mean(poker_start)", incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh v&agrave; hi&#7875;n th&#7883; ra m&agrave;n h&igrave;nh console &#273;&uacute;ng gi&aacute; tr&#7883; trung b&igrave;nh c&#7911;a `poker_start` ch&#432;a? D&ugrave;ng h&agrave;m `mean(poker_start)`.")
+success_msg("Gi&#7887;i l&#7855;m! Ngo&agrave;i vi&#7879;c chia nh&#7887; v&eacute;c-t&#417; theo th&#7913; ho&#7863;c theo t&ecirc;n, b&#7841;n c&#361;ng c&oacute; th&#7875; l&agrave;m th&#7871; nh&#7901; vi&#7879;c so s&aacute;nh. B&agrave;i t&#7853;p ti&#7871;p theo s&#7869; h&#432;&#7899;ng d&#7851;n b&#7841;n c&aacute;ch l&agrave;m n&agrave;y!");
 ```
 
 
@@ -905,14 +905,14 @@ selection_vector
 
 *** =sct
 ```{r}
-msg <- "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg <- "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("selection_vector", incorrect_msg = "Có vẻ như `selection_vector` không thể hiện kết quả đúng. Hãy nhớ rằng R kiểm tra từng yếu tố của véc-tơ.")
-test_output_contains("selection_vector", incorrect_msg = "Đừng quên in ra kết quả của`selection_vector` bằng cách gõ tên biến trên một dòng mới.")
-success_msg("Tuyệt vời!")
+test_object("selection_vector", incorrect_msg = "C&oacute; v&#7867; nh&#432; `selection_vector` kh&ocirc;ng th&#7875; hi&#7879;n k&#7871;t qu&#7843; &#273;&uacute;ng. H&atilde;y nh&#7899; r&#7857;ng R ki&#7875;m tra t&#7915;ng y&#7871;u t&#7889; c&#7911;a v&eacute;c-t&#417;.")
+test_output_contains("selection_vector", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; k&#7871;t qu&#7843; c&#7911;a`selection_vector` b&#7857;ng c&aacute;ch g&otilde; t&ecirc;n bi&#7871;n tr&ecirc;n m&#7897;t d&ograve;ng m&#7899;i.")
+success_msg("Tuy&#7879;t v&#7901;i!")
 ```
 
 
@@ -976,14 +976,14 @@ poker_winning_days <- poker_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("selection_vector", incorrect_msg = "Đừng sửa cách tính của `selection_vector`.")
+test_object("selection_vector", incorrect_msg = "&#272;&#7915;ng s&#7917;a c&aacute;ch t&iacute;nh c&#7911;a `selection_vector`.")
 test_object("poker_winning_days",
-            incorrect_msg =  "Có vẻ như `poker_winning_days` không cho kết quả chính xác. Dùng  `poker_vector[selection_vector]`.")
-success_msg("Tốt lắm! Sang bài tập tiếp theo nhé.")
+            incorrect_msg =  "C&oacute; v&#7867; nh&#432; `poker_winning_days` kh&ocirc;ng cho k&#7871;t qu&#7843; ch&iacute;nh x&aacute;c. D&ugrave;ng  `poker_vector[selection_vector]`.")
+success_msg("T&#7889;t l&#7855;m! Sang b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -1038,16 +1038,16 @@ roulette_winning_days <- roulette_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Đừng sửa gì trong phần định nghĩa và đặt tên của biến `poker_vector` và `roulette_vector`."
+msg = "&#272;&#7915;ng s&#7917;a g&igrave; trong ph&#7847;n &#273;&#7883;nh ngh&#297;a v&agrave; &#273;&#7863;t t&ecirc;n c&#7911;a bi&#7871;n `poker_vector` v&agrave; `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("selection_vector", 
-            incorrect_msg = "Có vẻ như `selection_vector` không chứa giá trị chính xác. Sử dụng  `roulette_vector > 0`.")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `selection_vector` kh&ocirc;ng ch&#7913;a gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c. S&#7917; d&#7909;ng  `roulette_vector &gt; 0`.")
 test_object("roulette_winning_days",
-            incorrect_msg = "Có vẻ như `roulette_winning_days` không chứa giá trị chính xác. Sử dụng `roulette_vector[selection_vector]`.")
+            incorrect_msg = "C&oacute; v&#7867; nh&#432; `roulette_winning_days` kh&ocirc;ng ch&#7913;a gi&aacute; tr&#7883; ch&iacute;nh x&aacute;c. S&#7917; d&#7909;ng `roulette_vector[selection_vector]`.")
 
-success_msg("Tuyệt vời! Chương về véc-tơ đã kết thúc ở tại đây. Ở chương tiếp theo, bạn sẽ được học phiên bản 2D của véc-tơ: Ma trận.")
+success_msg("Tuy&#7879;t v&#7901;i! Ch&#432;&#417;ng v&#7873; v&eacute;c-t&#417; &#273;&atilde; k&#7871;t th&uacute;c &#7903; t&#7841;i &#273;&acirc;y. &#7902; ch&#432;&#417;ng ti&#7871;p theo, b&#7841;n s&#7869; &#273;&#432;&#7907;c h&#7885;c phi&ecirc;n b&#7843;n 2D c&#7911;a v&eacute;c-t&#417;: Ma tr&#7853;n.")
 ```
 
 

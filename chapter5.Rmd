@@ -1,12 +1,12 @@
 --- 
 title_meta  : Chương 5
 title       : Data frames
-description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ co thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
+description : Phần lớn dữ liệu sử dụng để phân tích được lưu dưới dạng data frame. Đến cuối chương này, bạn sẽ có thể tạo được data frame, lựa chọn data frame và sắp xếp thứ tự của data frame theo biến xác định.
 
 --- type:NormalExercise xp:100 skills:1 key:7f95849020a2563168920409022ce7bed20835b5
 ## Data frame là gì?
 
-Trong bài giảng từ các phần trước, bạn hẳn còn nhớ rằng tất cả các thành phần trong một ma trận phải có cùng một định dạng. Ở phần trươc, tập dữ liệu Star Wars bạn có chỉ có duy nhất định dạng kiểu số. 
+Trong bài giảng từ các phần trước, bạn hẳn còn nhớ rằng tất cả các thành phần trong một ma trận phải có cùng một định dạng. Ở phần trước, tập dữ liệu Star Wars bạn có chỉ chứa duy nhất định dạng kiểu số. 
 
 Tuy nhiên, khi tiến hành khảo sát thị trường, ta thường hay phải sử dụng những câu hỏi như sau:
 
@@ -44,8 +44,8 @@ mtcars
 
 *** =sct
 ```{r}
-test_output_contains("mtcars", incorrect_msg = "Không thay đỗi các câu lệnh. Chắc chắn rằng bạn đã gõ chính xác `mtcars`.")
-success_msg("Tuyệt vời! Tiếp tục làm bài tập tiếp theo nhé.")
+test_output_contains("mtcars", incorrect_msg = "Kh&ocirc;ng thay &#273;&#7895;i c&aacute;c c&acirc;u l&#7879;nh. Ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n &#273;&atilde; g&otilde; ch&iacute;nh x&aacute;c `mtcars`.")
+success_msg("Tuy&#7879;t v&#7901;i! Ti&#7871;p t&#7909;c l&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -87,9 +87,9 @@ head(mtcars)
 
 *** =sct
 ```{r}
-test_function("head", "x", incorrect_msg = "Bạn đã gõ đúng tên tập dữ liệu `mtcars` trong hàm `head()` hay chưa?")
-test_output_contains("head(mtcars)", incorrect_msg = "Bạn chỉ cần hiển thị kết quả của hàm `head()`, không cần phải gán kết quả cho giá trị mới.")
-success_msg("Tuyệt vời! Chúng ta có gì trong tập dữ liệu này đây? Ví dụ, `hp` cho chúng ta thông tin về mã lực của các loại xe; xe Datsun có mã lực thấp nhất trong 6 chiếc xe được hiển thị. Để biết được tổng quan ý nghĩa của các biến, gõ lệnh `?mtcars`  trong màn hình tương tác và xem tài liệu mô tả. Làm bài tập tiếp theo nhé! ");
+test_function("head", "x", incorrect_msg = "B&#7841;n &#273;&atilde; g&otilde; &#273;&uacute;ng t&ecirc;n t&#7853;p d&#7919; li&#7879;u `mtcars` trong h&agrave;m `head()` hay ch&#432;a?")
+test_output_contains("head(mtcars)", incorrect_msg = "B&#7841;n ch&#7881; c&#7847;n hi&#7875;n th&#7883; k&#7871;t qu&#7843; c&#7911;a h&agrave;m `head()`, kh&ocirc;ng c&#7847;n ph&#7843;i g&aacute;n k&#7871;t qu&#7843; cho gi&aacute; tr&#7883; m&#7899;i.")
+success_msg("Tuy&#7879;t v&#7901;i! Ch&uacute;ng ta c&oacute; g&igrave; trong t&#7853;p d&#7919; li&#7879;u n&agrave;y &#273;&acirc;y? V&iacute; d&#7909;, `hp` cho ch&uacute;ng ta th&ocirc;ng tin v&#7873; m&atilde; l&#7921;c c&#7911;a c&aacute;c lo&#7841;i xe; xe Datsun c&oacute; m&atilde; l&#7921;c th&#7845;p nh&#7845;t trong 6 chi&#7871;c xe &#273;&#432;&#7907;c hi&#7875;n th&#7883;. &#272;&#7875; bi&#7871;t &#273;&#432;&#7907;c t&#7893;ng quan &yacute; ngh&#297;a c&#7911;a c&aacute;c bi&#7871;n, g&otilde; l&#7879;nh `?mtcars`  trong m&agrave;n h&igrave;nh t&#432;&#417;ng t&aacute;c v&agrave; xem t&agrave;i li&#7879;u m&ocirc; t&#7843;. L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!");
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:f4d5b1a2c4aef31645fc7e3505e699fb6e48f3e6
@@ -129,8 +129,8 @@ str(mtcars)
 
 *** =sct
 ```{r}
-test_output_contains("str(mtcars)", incorrect_msg = "Bạn đã sử dụng đúng lệnh `str()` với tập `mtcars`?")
-success_msg("Rất tốt! Bạn có thấy tất cả các thông tin hiển thị như bài tập của chúng ta hay không? Làm bài tập tiếp theo nhé.")
+test_output_contains("str(mtcars)", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng &#273;&uacute;ng l&#7879;nh `str()` v&#7899;i t&#7853;p `mtcars`?")
+success_msg("R&#7845;t t&#7889;t! B&#7841;n c&oacute; th&#7845;y t&#7845;t c&#7843; c&aacute;c th&ocirc;ng tin hi&#7875;n th&#7883; nh&#432; b&agrave;i t&#7853;p c&#7911;a ch&uacute;ng ta hay kh&ocirc;ng? L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -139,7 +139,7 @@ success_msg("Rất tốt! Bạn có thấy tất cả các thông tin hiển th�
 
 Chỉ sử dụng tập dữ liệu có sẵn trong R là chưa đủ, phần tiếp theo của chương này sẽ hướng dẫn các bạn cách thức tự tạo tập dữ liệu. 
 
-Ví dụ, bạn muốn tạo một data frame mô tả các thuộc tính của 8 hành tinh rong hệ mặt trời. Theo gợi ý từ bạn của bạn, các đặc tính cơ bản gồm có:
+Ví dụ, bạn muốn tạo một data frame mô tả các thuộc tính của 8 hành tinh trong hệ mặt trời. Theo gợi ý từ bạn của bạn, các đặc tính cơ bản gồm có:
 
 - Loại hành tinh (Terrestrial hay Gas Giant).
 - Bán kính (so với trái đất)
@@ -197,7 +197,7 @@ planets_df <- data.frame(name, type, diameter, rotation, rings)
 
 *** =sct
 ```{r}
-msg = "Không thay đổi các tham số khi xây dựng véc-tơ. Chỉ cần gọi hàm `data.frame()` để tạo data frame `planets_df`."
+msg = "Kh&ocirc;ng thay &#273;&#7893;i c&aacute;c tham s&#7889; khi x&acirc;y d&#7921;ng v&eacute;c-t&#417;. Ch&#7881; c&#7847;n g&#7885;i h&agrave;m `data.frame()` &#273;&#7875; t&#7841;o data frame `planets_df`."
 test_object("name", undefined_msg = msg, incorrect_msg = msg)
 test_object("type", undefined_msg = msg, incorrect_msg = msg)
 test_object("diameter", undefined_msg = msg, incorrect_msg = msg)
@@ -205,9 +205,9 @@ test_object("rotation", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("planets_df",
-            incorrect_msg = "Bạn đã sử dụng hàm `data.frame()` chính xác chưa? Lưu ý thứ tự các véc-tơ trong `data.frame()`, các véc-tơ cần được sắp xếp theo thứ tự: `name`, `type`, `diameter`, `rotation` and finally `rings`.")
+            incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `data.frame()` ch&iacute;nh x&aacute;c ch&#432;a? L&#432;u &yacute; th&#7913; t&#7921; c&aacute;c v&eacute;c-t&#417; trong `data.frame()`, c&aacute;c v&eacute;c-t&#417; c&#7847;n &#273;&#432;&#7907;c s&#7855;p x&#7871;p theo th&#7913; t&#7921;: `name`, `type`, `diameter`, `rotation` and finally `rings`.")
 
-success_msg("Rất tốt! Làm bài tập tiếp theo nhé. Theo logic tự nhiên, công việc tiếp theo của bạn sẽ là phân tích tập dữ liệu bạn vừa xây dựng.");
+success_msg("R&#7845;t t&#7889;t! L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;. Theo logic t&#7921; nhi&ecirc;n, c&ocirc;ng vi&#7879;c ti&#7871;p theo c&#7911;a b&#7841;n s&#7869; l&agrave; ph&acirc;n t&iacute;ch t&#7853;p d&#7919; li&#7879;u b&#7841;n v&#7915;a x&acirc;y d&#7921;ng.");
 ```
 
 
@@ -240,10 +240,10 @@ str(planets_df)
 
 *** =sct
 ```{r}
-msg = "Không xóa hay ghi đè lên tập dữ liệu `planets_df`"
+msg = "Kh&ocirc;ng x&oacute;a hay ghi &#273;&egrave; l&ecirc;n t&#7853;p d&#7919; li&#7879;u `planets_df`"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("str(planets_df)", incorrect_msg = "Bạn đã có kết quả của cấu trúc từ tập dữ liệu `planets_df`? Sử dụng hàm `str()` để hoàn thành!")
-success_msg("Tuyệt vời!  Giờ thì bạn đã hiểu rất rõ ràng cấu trúc của tập `planets_df`Now that you have a clear understanding of the `planets_df` data set. Đến lúc bạn cần biết làm thế nào để lựa chọn các giá trị trong tập dữ liệu này. Ta sẽ học tất cả những điều này trong các bài tập tiếp theo!")
+test_output_contains("str(planets_df)", incorrect_msg = "B&#7841;n &#273;&atilde; c&oacute; k&#7871;t qu&#7843; c&#7911;a c&#7845;u tr&uacute;c t&#7915; t&#7853;p d&#7919; li&#7879;u `planets_df`? S&#7917; d&#7909;ng h&agrave;m `str()` &#273;&#7875; ho&agrave;n th&agrave;nh!")
+success_msg("Tuy&#7879;t v&#7901;i!  Gi&#7901; th&igrave; b&#7841;n &#273;&atilde; hi&#7875;u r&#7845;t r&otilde; r&agrave;ng c&#7845;u tr&uacute;c c&#7911;a t&#7853;p `planets_df`. &#272;&#7871;n l&uacute;c b&#7841;n c&#7847;n bi&#7871;t l&agrave;m th&#7871; n&agrave;o &#273;&#7875; l&#7921;a ch&#7885;n c&aacute;c gi&aacute; tr&#7883; trong t&#7853;p d&#7919; li&#7879;u n&agrave;y. Ta s&#7869; h&#7885;c t&#7845;t c&#7843; nh&#7919;ng &#273;i&#7873;u n&agrave;y trong c&aacute;c b&agrave;i t&#7853;p ti&#7871;p theo!")
 ```
 
 
@@ -293,11 +293,11 @@ planets_df[4, ]
 
 *** =sct
 ```{r}
-msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1,3]", incorrect_msg = "Bạn đã lựa chọn và hiển thị bán kính của Mercury (sao Thủy) chưa? Bạn có thể sử dụng `[1,3]`.")
-test_output_contains("planets_df[4, ]", incorrect_msg = "Bạn đã lựa chọn và hiển thị tất cả dữ liệu của Mars  (sao Hỏa) chưa? Bạn có thể sử dụng `[4,]`.")
-success_msg("Tuyệt vời! Bện cạnh việc việc lựa chọn các biến theo thứ tự chữ số, bạn có thể sử dụng tên các biến trong data frame. Ta sẽ học kỹ thuật này trong bài tập tiếp theo.")
+test_output_contains("planets_df[1,3]", incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n v&agrave; hi&#7875;n th&#7883; b&aacute;n k&iacute;nh c&#7911;a Mercury (sao Th&#7911;y) ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `[1,3]`.")
+test_output_contains("planets_df[4, ]", incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n v&agrave; hi&#7875;n th&#7883; t&#7845;t c&#7843; d&#7919; li&#7879;u c&#7911;a Mars  (sao H&#7887;a) ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `[4,]`.")
+success_msg("Tuy&#7879;t v&#7901;i! B&#7879;n c&#7841;nh vi&#7879;c vi&#7879;c l&#7921;a ch&#7885;n c&aacute;c bi&#7871;n theo th&#7913; t&#7921; ch&#7919; s&#7889;, b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng t&ecirc;n c&aacute;c bi&#7871;n trong data frame. Ta s&#7869; h&#7885;c k&#7929; thu&#7853;t n&agrave;y trong b&agrave;i t&#7853;p ti&#7871;p theo.")
 ```
 
 
@@ -348,10 +348,10 @@ planets_df[1:5, "diameter"]
 
 *** =sct
 ```{r}
-msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "Bạn đã lựa chọn chính xác 5 giá trị đầu tiên của diameter chưa? Bạn có thể sử dụng `[1:5, \"diameter\"]`")
-success_msg("Rất tốt! Làm bài tập tiếp theo nhé!")
+test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n ch&iacute;nh x&aacute;c 5 gi&aacute; tr&#7883; &#273;&#7847;u ti&ecirc;n c&#7911;a diameter ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `[1:5, \"diameter\"]`")
+success_msg("R&#7845;t t&#7889;t! L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
 
@@ -406,12 +406,12 @@ rings_vector
 
 *** =sct
 ```{r}
-msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector",
-            incorrect_msg = "Bạn đã lựa chọn biến `rings` từ tập dữ liệu `planets_df` chính xác chưa? Sử dụng hàm `$rings`. Lưu kết quả vào véc-tơ `rings_vector`.")
-test_output_contains("rings_vector", incorrect_msg = "Đừng quên hiển thị kết quả của véc-tơ `rings_vector`sau khi khởi tạo!")
-success_msg("Tuyệt vời! Giờ thì cùng khám phá cách khác để lấy dữ liệu trong bài tập tiếp theo nhé!")
+            incorrect_msg = "B&#7841;n &#273;&atilde; l&#7921;a ch&#7885;n bi&#7871;n `rings` t&#7915; t&#7853;p d&#7919; li&#7879;u `planets_df` ch&iacute;nh x&aacute;c ch&#432;a? S&#7917; d&#7909;ng h&agrave;m `$rings`. L&#432;u k&#7871;t qu&#7843; v&agrave;o v&eacute;c-t&#417; `rings_vector`.")
+test_output_contains("rings_vector", incorrect_msg = "&#272;&#7915;ng qu&ecirc;n hi&#7875;n th&#7883; k&#7871;t qu&#7843; c&#7911;a v&eacute;c-t&#417; `rings_vector`sau khi kh&#7903;i t&#7841;o!")
+success_msg("Tuy&#7879;t v&#7901;i! Gi&#7901; th&igrave; c&ugrave;ng kh&aacute;m ph&aacute; c&aacute;ch kh&aacute;c &#273;&#7875; l&#7845;y d&#7919; li&#7879;u trong b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;!")
 ```
 
 
@@ -459,11 +459,11 @@ planets_df[rings_vector, ]
 
 *** =sct
 ```{r}
-msg <- "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg <- "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Bạn đã sử dụng câu lệnh chính xác chưa? Bạn có thể sử dụng `planets_df[rings_vector, ]`. Lưu ý sử dụng dấu phẩy trong trường hợp này!")
-success_msg("Tuyệt vời! Trong bài tập tiếp theo, chúng ta sẽ học một phương pháp khác, hiệu quả hơn.")
+test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng c&acirc;u l&#7879;nh ch&iacute;nh x&aacute;c ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `planets_df[rings_vector, ]`. L&#432;u &yacute; s&#7917; d&#7909;ng d&#7845;u ph&#7849;y trong tr&#432;&#7901;ng h&#7907;p n&agrave;y!")
+success_msg("Tuy&#7879;t v&#7901;i! Trong b&agrave;i t&#7853;p ti&#7871;p theo, ch&uacute;ng ta s&#7869; h&#7885;c m&#7897;t ph&#432;&#417;ng ph&aacute;p kh&aacute;c, hi&#7879;u qu&#7843; h&#417;n.")
 ```
 
 
@@ -481,7 +481,7 @@ subset(my_df, subset = some_condition)
 
 Tham số đầu tiên của  [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) xác định tập dữ liệu bạn muốn sử dụng. Bằng cách thêm tham số thứ hai, bạn cung cấp cho R các thông tin và điều kiện cần thiết để lọc dữ liệu.
 
-Các câu lệnh dưới đây sẽ cho bạn kết quả chinh xác như bài tập ở phần trước. Tuy nhiên ở phần này, bạn không cần phải sử dụng véc-tơ `rings_vector`!
+Các câu lệnh dưới đây sẽ cho bạn kết quả chính xác như bài tập ở phần trước. Tuy nhiên ở phần này, bạn không cần phải sử dụng véc-tơ `rings_vector`!
 
 
 ```
@@ -519,16 +519,16 @@ subset(planets_df, subset = diameter < 1)
 
 *** =sct
 ```{r}
-msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_correct({
-  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Bạn đã sử dụng điều kiện `subset = ...` chính xác chưa. Điều kiện cần thiết là `diameter < 1`. Hiển thị kết quả.")  
+  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "B&#7841;n &#273;&atilde; s&#7917; d&#7909;ng &#273;i&#7873;u ki&#7879;n `subset = ...` ch&iacute;nh x&aacute;c ch&#432;a. &#272;i&#7873;u ki&#7879;n c&#7847;n thi&#7871;t l&agrave; `diameter < 1`. Hi&#7875;n th&#7883; k&#7871;t qu&#7843;.")  
 }, {
   test_function("subset", args = "x", 
-                not_called_msg = "Hãy chắc chắn rằng bạn đã sử dụng hàm `subset()`!",
-                incorrect_msg = "Tham số đầu tiên trong hàm `subset()` là `planets_df`.")
+                not_called_msg = "H&atilde;y ch&#7855;c ch&#7855;n r&#7857;ng b&#7841;n &#273;&atilde; s&#7917; d&#7909;ng h&agrave;m `subset()`!",
+                incorrect_msg = "Tham s&#7889; &#273;&#7847;u ti&ecirc;n trong h&agrave;m `subset()` l&agrave; `planets_df`.")
 })
-success_msg("Tuyệt vời! Hàm `subset()` không chỉ đơn giản hơn, mà còn dễ hiểu hơn để đọc hiểu các đoạn code của bạn. Làm bài tập tiếp theo nhé.");
+success_msg("Tuy&#7879;t v&#7901;i! H&agrave;m `subset()` kh&ocirc;ng ch&#7881; &#273;&#417;n gi&#7843;n h&#417;n, m&agrave; c&ograve;n d&#7877; hi&#7875;u h&#417;n khi theo d&otilde;i c&aacute;c &#273;o&#7841;n code c&#7911;a b&#7841;n. L&agrave;m b&agrave;i t&#7853;p ti&#7871;p theo nh&eacute;.")
 ```
 
 
@@ -576,7 +576,7 @@ Chỉ cần gõ lệnh [`order()`](http://www.rdocumentation.org/packages/base/f
 
 *** =sct
 ```{r}
-success_msg("Tuyệt vời! Giờ thì ta hãy sử dụng hàm `order()` để sắp xếp thứ tự trong data frame!")
+success_msg("Tuy&#7879;t v&#7901;i! Gi&#7901; th&igrave; ta h&atilde;y s&#7917; d&#7909;ng h&agrave;m `order()` &#273;&#7875; s&#7855;p x&#7871;p th&#7913; t&#7921; trong data frame!")
 ```
 
 
@@ -622,13 +622,13 @@ planets_df[positions, ]
 
 *** =sct
 ```{r}
-msg = "Không xóa hoặc thay đổi dữ liệu `planets_df`!"
+msg = "Kh&ocirc;ng x&oacute;a ho&#7863;c thay &#273;&#7893;i d&#7919; li&#7879;u `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("positions",
-            incorrect_msg = "Bạn đã tính chính xác biến `positions` hay chưa? Bạn có thể sử dụng `sort(planets_df$diameter)`.")
+            incorrect_msg = "B&#7841;n &#273;&atilde; t&iacute;nh ch&iacute;nh x&aacute;c bi&#7871;n `positions` hay ch&#432;a? B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng `sort(planets_df$diameter)`.")
 test_output_contains("planets_df[positions,]",
-                     incorrect_msg = "Sử dụng hàm `planets_df[positions, ]` để sắp xếp lại thứ tự `planets_df`; lưu ý sử dụng dấu phẩy trong ngoặc vuông!")
-success_msg("Tuyệt vời! Bài tập này kết thúc chương nói về data frame. Nhớ rằng với R data frame là kiểu dữ liệu rất quan trong bởi lẽ bạn sẽ phải sử dụng data frame trong suốt quá trình phân tích dữ liệu Một kiểu cấu trúc dữ liệu thường gặp khác là list, và chúng ta sẽ tìm hiểu thêm về list trong chương tiếp theo")
+                     incorrect_msg = "S&#7917; d&#7909;ng h&agrave;m `planets_df[positions, ]` &#273;&#7875; s&#7855;p x&#7871;p l&#7841;i th&#7913; t&#7921; `planets_df`; l&#432;u &yacute; s&#7917; d&#7909;ng d&#7845;u ph&#7849;y trong ngo&#7863;c vu&ocirc;ng!")
+success_msg("Tuy&#7879;t v&#7901;i! B&agrave;i t&#7853;p n&agrave;y k&#7871;t th&uacute;c ch&#432;&#417;ng n&oacute;i v&#7873; data frame. Nh&#7899; r&#7857;ng v&#7899;i R data frame l&agrave; ki&#7875;u d&#7919; li&#7879;u r&#7845;t quan trong b&#7903;i l&#7869; b&#7841;n s&#7869; ph&#7843;i s&#7917; d&#7909;ng data frame trong su&#7889;t qu&aacute; tr&igrave;nh ph&acirc;n t&iacute;ch d&#7919; li&#7879;u. M&#7897;t ki&#7875;u c&#7845;u tr&uacute;c d&#7919; li&#7879;u th&#432;&#7901;ng g&#7863;p kh&aacute;c l&agrave; list, v&agrave; ch&uacute;ng ta s&#7869; c&ugrave;ng t&igrave;m hi&#7875;u th&ecirc;m v&#7873; list trong ch&#432;&#417;ng ti&#7871;p theo.")
 ```
 
 
