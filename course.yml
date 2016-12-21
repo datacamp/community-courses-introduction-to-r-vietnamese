@@ -4,15 +4,16 @@ instructors:
   - hoangducanh89@gmail.com
 time_needed: 4 giờ
 difficulty_level: 1
-author_bio: "Anh is a data vizualizer & applied modeller, 
-  co-founder of <a href='http://www.ranalytics.vn' target='_blank'>RAnalytics.vn</a>. 
-  He provides training in R & data analytics in Hanoi, Vietnam. 
-  His courses provide various aspects of R such as data analysis, data wrangling, data vizualization or predictive model. 
+author_bio: "Anh is a data vizualizer & applied modeller,
+  co-founder of <a href='http://www.ranalytics.vn' target='_blank'>RAnalytics.vn</a>.
+  He provides training in R & data analytics in Hanoi, Vietnam.
+  His courses provide various aspects of R such as data analysis, data wrangling, data vizualization or predictive model.
   Anh holds master degree in Quantitative Methods in Economics."
-description: "Trong loạt bài giảng này, bạn sẽ học được cách làm chủ những kiến thức cơ bản 
-  của ngôn ngữ lập trình thông kê R, bao gồm factors, list và data frame. Những kiến thức này 
-  sẽ giúp bạn bắt đầu công việc của một nhà phân tích dữ liệu. Với hơn 2 triệu người sử dụng R 
+description: "Trong loạt bài giảng này, bạn sẽ học được cách làm chủ những kiến thức cơ bản
+  của ngôn ngữ lập trình thông kê R, bao gồm factors, list và data frame. Những kiến thức này
+  sẽ giúp bạn bắt đầu công việc của một nhà phân tích dữ liệu. Với hơn 2 triệu người sử dụng R
   trên toàn thế giới, R đang nhanh chóng trở thành ngôn ngữ lập trình số một trong
-  giới thống kê và khoa học số liệu. Hàng năm, số lượng người dùng R tăng hơn 40% và ngày 
-  càng có nhiều cơ quan và tổ chức sử dụng R trong hoạt động phân tích thường nhật. Hãy bắt đầu 
+  giới thống kê và khoa học số liệu. Hàng năm, số lượng người dùng R tăng hơn 40% và ngày
+  càng có nhiều cơ quan và tổ chức sử dụng R trong hoạt động phân tích thường nhật. Hãy bắt đầu
   khám phá sức mạnh và học cách sử dụng R ngay từ ngày hôm nay."
+from: "r-base-prod:10"
